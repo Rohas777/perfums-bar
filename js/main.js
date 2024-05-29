@@ -112,11 +112,18 @@ function checkForm(inputs) {
 }
 
 $(document).ready(function () {
+    //NOTE - Инициализация галлерей
+
+    Fancybox.bind("[data-fancybox]", {});
+
     //NOTE - Слайдер в оффере
 
     const offerSwiper = new Swiper(".offer__slider", {
-        items: 1,
+        slidesPerView: 1,
         loop: true,
+        autoplay: {
+            delay: 5000,
+        },
 
         navigation: {
             nextEl: ".offer__slider .swiper-button-next",
@@ -235,5 +242,28 @@ $(document).ready(function () {
         ];
 
         console.log(checkForm(inputs));
+    });
+
+    //NOTE - Слайдер сертификатов
+
+    const certsSwiper = new Swiper(".certs__slider", {
+        slidesPerView: 3,
+        loop: true,
+        navigation: {
+            nextEl: ".certs__nav .swiper-button-next",
+            prevEl: ".certs__nav .swiper-button-prev",
+        },
+    });
+
+    //NOTE - Слайдер отзывов
+
+    const reviewsSwiper = new Swiper(".reviews__slider", {
+        slidesPerView: 3,
+        spaceBetween: 40,
+        loop: true,
+        navigation: {
+            nextEl: ".reviews__nav .swiper-button-next",
+            prevEl: ".reviews__nav .swiper-button-prev",
+        },
     });
 });
