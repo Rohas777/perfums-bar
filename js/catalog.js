@@ -66,6 +66,14 @@ $(document).ready(function () {
 
     
 
+    $(".product-card__fav").click(function () {
+
+        $(this).toggleClass("added");
+
+    });
+
+    
+
     //NOTE - Функционал кнопки фильтров
 
     $(".menu__filter").click(function () {

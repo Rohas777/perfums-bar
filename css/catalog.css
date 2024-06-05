@@ -216,6 +216,36 @@ h6 {
   }
 }
 
+@keyframes blobs-animation1 {
+  from {
+    transform: rotate(-15deg) scale(0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(-30deg) scale(3.5);
+    opacity: 0;
+  }
+}
+
+@keyframes blobs-animation2 {
+  from {
+    transform: rotate(10deg) scale(0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(30deg) scale(3);
+    opacity: 0;
+  }
+}
+
 .hidden {
   overflow: hidden !important;
 }
@@ -1879,12 +1909,73 @@ main {
   transition: all 0.3s ease-out 0s;
 }
 
-.product-card__fav path {
+.product-card__fav path,
+.product-card__fav line,
+.product-card__fav svg {
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
+}
+
+.product-card__fav line {
+  opacity: 0;
+}
+
+.product-card__fav.added {
+  background-color: #000000;
+}
+
+.product-card__fav.added:before,
+.product-card__fav.added:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -2px;
+  margin-top: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  transform: scale(0);
+  color: var(--red);
+  border: 1px solid transparent;
+  box-shadow: -0.8em 0 0 -2px, 0.8em 0 0 -2px, 0 -0.8em 0 -2px, 0 0.8em 0 -2px, -0.6em -0.6em 0 -2px, -0.6em 0.6em 0 -2px, 0.6em -0.6em 0 -2px, 0.6em 0.6em 0 -2px;
+}
+
+.product-card__fav.added:before {
+  animation: blobs-animation1 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card__fav.added:after {
+  animation: blobs-animation2 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-card__fav.added path {
+  fill: #ffffff;
+}
+
+.product-card__fav.added:hover {
+  background-color: #ffffff;
+  border-color: var(--red);
+}
+
+.product-card__fav.added:hover line {
+  stroke: var(--red);
+  opacity: 1;
+}
+
+.product-card__fav.added:hover path {
+  fill: var(--red);
+}
+
+.product-card__fav:active svg {
+  -moz-transform: scale(1.35);
+  -ms-transform: scale(1.35);
+  -webkit-transform: scale(1.35);
+  -o-transform: scale(1.35);
+  transform: scale(1.35);
 }
 
 .product-card__fav:hover {

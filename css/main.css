@@ -218,6 +218,36 @@ h6 {
   }
 }
 
+@keyframes blobs-animation1 {
+  from {
+    transform: rotate(-15deg) scale(0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(-30deg) scale(3.5);
+    opacity: 0;
+  }
+}
+
+@keyframes blobs-animation2 {
+  from {
+    transform: rotate(10deg) scale(0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(30deg) scale(3);
+    opacity: 0;
+  }
+}
+
 .hidden {
   overflow: hidden !important;
 }
