@@ -22,6 +22,21 @@ $(document).ready(function () {
             }, 800);
         }
     });
+    $(document).on("mouseup", function (e) {
+        if (
+            !$(".menu__search").is(e.target) &&
+            $(".menu__search").has(e.target).length === 0
+        ) {
+            if ($(".search").hasClass("active")) {
+                $(".search").removeClass("active");
+                $(".menu__search").removeClass("active");
+                $(".menu__buttons").removeClass("search-opened");
+                setTimeout(function () {
+                    $(".search__input").val("");
+                }, 800);
+            }
+        }
+    });
 
     //NOTE - Переключение цвета категорий
 
@@ -82,7 +97,7 @@ $(document).ready(function () {
         $(".filter").addClass("opened");
     });
 
-    $(".overlay").click(function () {
+    $(".overlay").on("mouseup", function () {
         turnOverlay(false);
         $(".menu__filter").removeClass("active");
         $(".filter").removeClass("opened");
@@ -112,5 +127,18 @@ $(document).ready(function () {
         console.log(
             $(this).closest(".filter__chunk").find("input").prop("checked")
         );
+    });
+
+    //NOTE - Слайдер истории просмотров
+
+    const historySwiper = new Swiper(".history__slider", {
+        slidesPerView: 3,
+        spaceBetween: 35,
+        loop: true,
+
+        navigation: {
+            nextEl: ".history__slider .swiper-button-next",
+            prevEl: ".history__slider .swiper-button-prev",
+        },
     });
 });
