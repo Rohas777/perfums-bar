@@ -110,3 +110,16 @@ function checkForm(inputs) {
 
     return response;
 }
+
+//NOTE - Включение/выключение оверлея
+
+function turnOverlay(turn) {
+    if (turn) {
+        $("body, html").addClass("hidden");
+        $(".overlay").fadeIn(300);
+        return;
+    }
+
+    $("body, html").removeClass("hidden");
+    $(".overlay").fadeOut(300);
+}

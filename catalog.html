@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="/css/aos.css" />
-        <link rel="stylesheet" href="/css/fancybox.css" />
+        <link rel="stylesheet" href="/vendor/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/vendor/css/aos.css" />
+        <link rel="stylesheet" href="/vendor/css/fancybox.css" />
         <link rel="stylesheet" href="/css/catalog.css" />
         <title>Главная</title>
     </head>
@@ -154,12 +154,12 @@
             </div>
         </header>
         <main>
-    <div class="breadcrumbs">
+    <section class="breadcrumbs">
         <div class="container">
             <p><a href="/" title="На главную">Главная</a> / каталог</p>
         </div>
-    </div>
-    <div class="menu">
+    </section>
+    <section class="menu">
         <div class="container">
             <h1 class="title">Каталог</h1>
             <div class="menu__selector">
@@ -226,9 +226,903 @@
                 </button>
             </div>
         </div>
+    </section>
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog__wrapper">
+                <article class="product-card">
+    <div class="product-card__header">
+        <button class="product-card__fav">
+            <svg
+    width="22"
+    height="20"
+    viewBox="0 0 22 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        d="M11 20L10.67 19.8583C5.48901 17.5795 -0.0219341 13.1093 6.56519e-05 7.37432C0.0110655 3.99438 1.90305 1.27954 4.92802 0.320071C7.249 -0.421333 9.37198 0.13472 11 1.8901C12.6279 0.13472 14.7509 -0.421333 17.0719 0.320071C20.0969 1.29044 21.9889 3.99438 21.9999 7.38522C22.0329 13.1093 16.5109 17.5795 11.33 19.8583L11 20ZM6.875 1.62843C6.413 1.62843 5.94001 1.70475 5.43401 1.8683C2.65104 2.75144 1.65005 5.30275 1.65005 7.38522C1.62805 12.2043 6.6 16.1839 11 18.201C15.3999 16.1839 20.3719 12.2043 20.3499 7.38522C20.3499 5.30275 19.3379 2.76234 16.5659 1.8683C14.5969 1.23592 12.9579 1.84649 11.682 3.65639L11 4.61586L10.318 3.65639C9.37198 2.30442 8.21699 1.61753 6.875 1.61753V1.62843Z"
+        fill="#6F6F6F"
+    />
+</svg>
+
+        </button>
+        <a href="/product.html">
+            <div class="product-card__marks">
+                 
+                <div
+                    class="product-card__mark product-card__mark_new-collection"
+                >
+                    <span><span class="big-letter">N</span>ew coolection</span>
+                </div>
+                 
+            </div>
+            <img
+                src="/images/catalog/thumb.png"
+                alt="TOM FORD lost cherry"
+                class="product-card__img product-card__img_main"
+            />
+            <img
+                src="/images/catalog/tom-ford-lost-cherry.png"
+                alt="TOM FORD lost cherry original"
+                class="product-card__img product-card__img_original"
+            />
+        </a>
     </div>
+    <div class="product-card__body">
+        <a href="/product.html"><h3>TOM FORD lost cherry</h3></a>
+        <p class="product-card__category">Духи</p>
+        <p class="product-card__notes">
+            <span>Ноты:</span><span>табачный лист и специи</span>
+        </p>
+        <p class="product-card__capacity">
+            <span>Объем:</span>
+            <button class="product-card__capacity-item active ">
+                8 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                20 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                30 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                50 мл
+            </button>
+            <button class="product-card__capacity-item not-avialable">
+                100 мл
+            </button>
+        </p>
+    </div>
+    <div class="product-card__footer">
+        <div class="product-card__btns">
+            <button
+                class="product-card__btn product-card__btn_add-to-cart btn btn_black"
+            >
+                Добавить в корзину
+            </button>
+            <button class="product-card__btn product-card__btn_buy-now btn">
+                купить сразу
+            </button>
+        </div>
+        <p class="product-card__price">
+            <span>19 900 ₽</span>
+            <strong>23 500 ₽</strong>
+        </p>
+    </div>
+</article>
+<article class="product-card">
+    <div class="product-card__header">
+        <button class="product-card__fav">
+            <svg
+    width="22"
+    height="20"
+    viewBox="0 0 22 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        d="M11 20L10.67 19.8583C5.48901 17.5795 -0.0219341 13.1093 6.56519e-05 7.37432C0.0110655 3.99438 1.90305 1.27954 4.92802 0.320071C7.249 -0.421333 9.37198 0.13472 11 1.8901C12.6279 0.13472 14.7509 -0.421333 17.0719 0.320071C20.0969 1.29044 21.9889 3.99438 21.9999 7.38522C22.0329 13.1093 16.5109 17.5795 11.33 19.8583L11 20ZM6.875 1.62843C6.413 1.62843 5.94001 1.70475 5.43401 1.8683C2.65104 2.75144 1.65005 5.30275 1.65005 7.38522C1.62805 12.2043 6.6 16.1839 11 18.201C15.3999 16.1839 20.3719 12.2043 20.3499 7.38522C20.3499 5.30275 19.3379 2.76234 16.5659 1.8683C14.5969 1.23592 12.9579 1.84649 11.682 3.65639L11 4.61586L10.318 3.65639C9.37198 2.30442 8.21699 1.61753 6.875 1.61753V1.62843Z"
+        fill="#6F6F6F"
+    />
+</svg>
+
+        </button>
+        <a href="/product.html">
+            <div class="product-card__marks">
+                  
+                <div class="product-card__mark product-card__mark_sale">
+                    <strong>20%</strong>
+                    <span>На этот товар действует скидка</span>
+                </div>
+                
+            </div>
+            <img
+                src="/images/catalog/thumb.png"
+                alt="TOM FORD bitter peach"
+                class="product-card__img product-card__img_main"
+            />
+            <img
+                src="/images/catalog/tom-ford-bitter-peach.png"
+                alt="TOM FORD bitter peach original"
+                class="product-card__img product-card__img_original"
+            />
+        </a>
+    </div>
+    <div class="product-card__body">
+        <a href="/product.html"><h3>TOM FORD bitter peach</h3></a>
+        <p class="product-card__category">Духи</p>
+        <p class="product-card__notes">
+            <span>Ноты:</span><span>табачный лист и специи</span>
+        </p>
+        <p class="product-card__capacity">
+            <span>Объем:</span>
+            <button class="product-card__capacity-item active ">
+                8 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                20 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                30 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                50 мл
+            </button>
+            <button class="product-card__capacity-item not-avialable">
+                100 мл
+            </button>
+        </p>
+    </div>
+    <div class="product-card__footer">
+        <div class="product-card__btns">
+            <button
+                class="product-card__btn product-card__btn_add-to-cart btn btn_black"
+            >
+                Добавить в корзину
+            </button>
+            <button class="product-card__btn product-card__btn_buy-now btn">
+                купить сразу
+            </button>
+        </div>
+        <p class="product-card__price">
+            <span>19 900 ₽</span>
+            <strong>23 500 ₽</strong>
+        </p>
+    </div>
+</article>
+<article class="product-card">
+    <div class="product-card__header">
+        <button class="product-card__fav">
+            <svg
+    width="22"
+    height="20"
+    viewBox="0 0 22 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        d="M11 20L10.67 19.8583C5.48901 17.5795 -0.0219341 13.1093 6.56519e-05 7.37432C0.0110655 3.99438 1.90305 1.27954 4.92802 0.320071C7.249 -0.421333 9.37198 0.13472 11 1.8901C12.6279 0.13472 14.7509 -0.421333 17.0719 0.320071C20.0969 1.29044 21.9889 3.99438 21.9999 7.38522C22.0329 13.1093 16.5109 17.5795 11.33 19.8583L11 20ZM6.875 1.62843C6.413 1.62843 5.94001 1.70475 5.43401 1.8683C2.65104 2.75144 1.65005 5.30275 1.65005 7.38522C1.62805 12.2043 6.6 16.1839 11 18.201C15.3999 16.1839 20.3719 12.2043 20.3499 7.38522C20.3499 5.30275 19.3379 2.76234 16.5659 1.8683C14.5969 1.23592 12.9579 1.84649 11.682 3.65639L11 4.61586L10.318 3.65639C9.37198 2.30442 8.21699 1.61753 6.875 1.61753V1.62843Z"
+        fill="#6F6F6F"
+    />
+</svg>
+
+        </button>
+        <a href="/product.html">
+            <div class="product-card__marks">
+                
+                <div class="product-card__mark product-card__mark_bestseller">
+                    <img
+                        src="/images/assets/besttseller.png"
+                        alt="Бестселлер"
+                    />
+                    <span>B</span>
+                </div>
+                  
+            </div>
+            <img
+                src="/images/catalog/thumb.png"
+                alt="TOM FORD lost cherry"
+                class="product-card__img product-card__img_main"
+            />
+            <img
+                src="/images/catalog/tom-ford-lost-cherry.png"
+                alt="TOM FORD lost cherry original"
+                class="product-card__img product-card__img_original"
+            />
+        </a>
+    </div>
+    <div class="product-card__body">
+        <a href="/product.html"><h3>TOM FORD lost cherry</h3></a>
+        <p class="product-card__category">Духи</p>
+        <p class="product-card__notes">
+            <span>Ноты:</span><span>табачный лист и специи</span>
+        </p>
+        <p class="product-card__capacity">
+            <span>Объем:</span>
+            <button class="product-card__capacity-item active ">
+                8 мл
+            </button>
+            <button class="product-card__capacity-item not-avialable">
+                20 мл
+            </button>
+            <button class="product-card__capacity-item not-avialable">
+                30 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                50 мл
+            </button>
+            <button class="product-card__capacity-item not-avialable">
+                100 мл
+            </button>
+        </p>
+    </div>
+    <div class="product-card__footer">
+        <div class="product-card__btns">
+            <button
+                class="product-card__btn product-card__btn_add-to-cart btn btn_black"
+            >
+                Добавить в корзину
+            </button>
+            <button class="product-card__btn product-card__btn_buy-now btn">
+                купить сразу
+            </button>
+        </div>
+        <p class="product-card__price">
+            <span>19 900 ₽</span>
+            <strong>19 900 ₽</strong>
+        </p>
+    </div>
+</article>
+<article class="product-card">
+    <div class="product-card__header">
+        <button class="product-card__fav">
+            <svg
+    width="22"
+    height="20"
+    viewBox="0 0 22 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        d="M11 20L10.67 19.8583C5.48901 17.5795 -0.0219341 13.1093 6.56519e-05 7.37432C0.0110655 3.99438 1.90305 1.27954 4.92802 0.320071C7.249 -0.421333 9.37198 0.13472 11 1.8901C12.6279 0.13472 14.7509 -0.421333 17.0719 0.320071C20.0969 1.29044 21.9889 3.99438 21.9999 7.38522C22.0329 13.1093 16.5109 17.5795 11.33 19.8583L11 20ZM6.875 1.62843C6.413 1.62843 5.94001 1.70475 5.43401 1.8683C2.65104 2.75144 1.65005 5.30275 1.65005 7.38522C1.62805 12.2043 6.6 16.1839 11 18.201C15.3999 16.1839 20.3719 12.2043 20.3499 7.38522C20.3499 5.30275 19.3379 2.76234 16.5659 1.8683C14.5969 1.23592 12.9579 1.84649 11.682 3.65639L11 4.61586L10.318 3.65639C9.37198 2.30442 8.21699 1.61753 6.875 1.61753V1.62843Z"
+        fill="#6F6F6F"
+    />
+</svg>
+
+        </button>
+        <a href="/product.html">
+            <div class="product-card__marks">
+                  
+            </div>
+            <img
+                src="/images/catalog/tom-ford-lost-cherry.png"
+                alt="TOM FORD lost cherry"
+                class="product-card__img product-card__img_main"
+            />
+            <img
+                src="/images/catalog/thumb.png"
+                alt="TOM FORD lost cherry original"
+                class="product-card__img product-card__img_original"
+            />
+        </a>
+    </div>
+    <div class="product-card__body">
+        <a href="/product.html"><h3>TOM FORD lost cherry</h3></a>
+        <p class="product-card__category">Духи</p>
+        <p class="product-card__notes">
+            <span>Ноты:</span><span>табачный лист и специи</span>
+        </p>
+        <p class="product-card__capacity">
+            <span>Объем:</span>
+            <button class="product-card__capacity-item active ">
+                8 мл
+            </button>
+            <button class="product-card__capacity-item not-avialable">
+                20 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                30 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                50 мл
+            </button>
+            <button class="product-card__capacity-item not-avialable">
+                100 мл
+            </button>
+        </p>
+    </div>
+    <div class="product-card__footer">
+        <div class="product-card__btns">
+            <button
+                class="product-card__btn product-card__btn_add-to-cart btn btn_black"
+            >
+                Добавить в корзину
+            </button>
+            <button class="product-card__btn product-card__btn_buy-now btn">
+                купить сразу
+            </button>
+        </div>
+        <p class="product-card__price">
+            <span>19 900 ₽</span>
+            <strong>19 900 ₽</strong>
+        </p>
+    </div>
+</article>
+<article class="product-card">
+    <div class="product-card__header">
+        <button class="product-card__fav">
+            <svg
+    width="22"
+    height="20"
+    viewBox="0 0 22 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        d="M11 20L10.67 19.8583C5.48901 17.5795 -0.0219341 13.1093 6.56519e-05 7.37432C0.0110655 3.99438 1.90305 1.27954 4.92802 0.320071C7.249 -0.421333 9.37198 0.13472 11 1.8901C12.6279 0.13472 14.7509 -0.421333 17.0719 0.320071C20.0969 1.29044 21.9889 3.99438 21.9999 7.38522C22.0329 13.1093 16.5109 17.5795 11.33 19.8583L11 20ZM6.875 1.62843C6.413 1.62843 5.94001 1.70475 5.43401 1.8683C2.65104 2.75144 1.65005 5.30275 1.65005 7.38522C1.62805 12.2043 6.6 16.1839 11 18.201C15.3999 16.1839 20.3719 12.2043 20.3499 7.38522C20.3499 5.30275 19.3379 2.76234 16.5659 1.8683C14.5969 1.23592 12.9579 1.84649 11.682 3.65639L11 4.61586L10.318 3.65639C9.37198 2.30442 8.21699 1.61753 6.875 1.61753V1.62843Z"
+        fill="#6F6F6F"
+    />
+</svg>
+
+        </button>
+        <a href="/product.html">
+            <div class="product-card__marks">
+                  
+            </div>
+            <img
+                src="/images/catalog/tom-ford-bitter-peach.png"
+                alt="TOM FORD bitter peach"
+                class="product-card__img product-card__img_main"
+            />
+            <img
+                src="/images/catalog/thumb.png"
+                alt="TOM FORD bitter peach original"
+                class="product-card__img product-card__img_original"
+            />
+        </a>
+    </div>
+    <div class="product-card__body">
+        <a href="/product.html"><h3>TOM FORD bitter peach</h3></a>
+        <p class="product-card__category">Духи</p>
+        <p class="product-card__notes">
+            <span>Ноты:</span><span>табачный лист и специи</span>
+        </p>
+        <p class="product-card__capacity">
+            <span>Объем:</span>
+            <button class="product-card__capacity-item active ">
+                8 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                20 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                30 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                50 мл
+            </button>
+            <button class="product-card__capacity-item not-avialable">
+                100 мл
+            </button>
+        </p>
+    </div>
+    <div class="product-card__footer">
+        <div class="product-card__btns">
+            <button
+                class="product-card__btn product-card__btn_add-to-cart btn btn_black"
+            >
+                Добавить в корзину
+            </button>
+            <button class="product-card__btn product-card__btn_buy-now btn">
+                купить сразу
+            </button>
+        </div>
+        <p class="product-card__price">
+            <span>19 900 ₽</span>
+            <strong>19 900 ₽</strong>
+        </p>
+    </div>
+</article>
+<article class="product-card">
+    <div class="product-card__header">
+        <button class="product-card__fav">
+            <svg
+    width="22"
+    height="20"
+    viewBox="0 0 22 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        d="M11 20L10.67 19.8583C5.48901 17.5795 -0.0219341 13.1093 6.56519e-05 7.37432C0.0110655 3.99438 1.90305 1.27954 4.92802 0.320071C7.249 -0.421333 9.37198 0.13472 11 1.8901C12.6279 0.13472 14.7509 -0.421333 17.0719 0.320071C20.0969 1.29044 21.9889 3.99438 21.9999 7.38522C22.0329 13.1093 16.5109 17.5795 11.33 19.8583L11 20ZM6.875 1.62843C6.413 1.62843 5.94001 1.70475 5.43401 1.8683C2.65104 2.75144 1.65005 5.30275 1.65005 7.38522C1.62805 12.2043 6.6 16.1839 11 18.201C15.3999 16.1839 20.3719 12.2043 20.3499 7.38522C20.3499 5.30275 19.3379 2.76234 16.5659 1.8683C14.5969 1.23592 12.9579 1.84649 11.682 3.65639L11 4.61586L10.318 3.65639C9.37198 2.30442 8.21699 1.61753 6.875 1.61753V1.62843Z"
+        fill="#6F6F6F"
+    />
+</svg>
+
+        </button>
+        <a href="/product.html">
+            <div class="product-card__marks">
+                  
+            </div>
+            <img
+                src="/images/catalog/tom-ford-lost-cherry.png"
+                alt="TOM FORD lost cherry"
+                class="product-card__img product-card__img_main"
+            />
+            <img
+                src="/images/catalog/thumb.png"
+                alt="TOM FORD lost cherry original"
+                class="product-card__img product-card__img_original"
+            />
+        </a>
+    </div>
+    <div class="product-card__body">
+        <a href="/product.html"><h3>TOM FORD lost cherry</h3></a>
+        <p class="product-card__category">Духи</p>
+        <p class="product-card__notes">
+            <span>Ноты:</span><span>табачный лист и специи</span>
+        </p>
+        <p class="product-card__capacity">
+            <span>Объем:</span>
+            <button class="product-card__capacity-item active ">
+                8 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                20 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                30 мл
+            </button>
+            <button class="product-card__capacity-item ">
+                50 мл
+            </button>
+            <button class="product-card__capacity-item not-avialable">
+                100 мл
+            </button>
+        </p>
+    </div>
+    <div class="product-card__footer">
+        <div class="product-card__btns">
+            <button
+                class="product-card__btn product-card__btn_add-to-cart btn btn_black"
+            >
+                Добавить в корзину
+            </button>
+            <button class="product-card__btn product-card__btn_buy-now btn">
+                купить сразу
+            </button>
+        </div>
+        <p class="product-card__price">
+            <span>19 900 ₽</span>
+            <strong>19 900 ₽</strong>
+        </p>
+    </div>
+</article>
+
+            </div>
+            <div class="catalog__pagination">
+                <a href="/" class="btn catalog__nav catalog__nav_prev">
+                    <svg
+    width="13"
+    height="25"
+    viewBox="0 0 13 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+        transform="rotate(180)"
+    
+>
+    <path
+        d="M0.900116 23.5703L12.0176 12.5006L0.900116 1.43098"
+        stroke="#4A4A4A"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                </a>
+                <ul class="catalog__pages">
+                    <li class="active">1</li>
+                    <li><a href="/">2</a></li>
+                    <li><a href="/">3</a></li>
+                    <li><a href="/">4</a></li>
+                    <li><a href="/">5</a></li>
+                    <li class="dots">...</li>
+                    <li><a href="/">18</a></li>
+                </ul>
+                <a
+                    href="/"
+                    class="btn btn_black catalog__nav catalog__nav_next"
+                >
+                    <svg
+    width="13"
+    height="25"
+    viewBox="0 0 13 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+>
+    <path
+        d="M0.900116 23.5703L12.0176 12.5006L0.900116 1.43098"
+        stroke="#4A4A4A"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="history">
+        <div class="container">
+            <h2 class="title">СМОТРЕЛИ РАНЕЕ</h2>
+            <div class="history__wrapper">
+                <a class="history-card" href="/product.html">
+                    <span>
+                        <img
+                            src="/images/catalog/tom-ford-lost-cherry.png"
+                            alt="TOM FORD lost cherry"
+                            class="history-card__img history-card__img_main"
+                        />
+                        <img
+                            src="/images/catalog/thumb.png"
+                            alt="TOM FORD lost cherry original"
+                            class="history-card__img history-card__img_original"
+                        />
+                    </span>
+                    <h3 class="history-card__name">TOM FORD lost cherry</h3>
+                </a>
+                <a class="history-card" href="/product.html">
+                    <span>
+                        <img
+                            src="/images/catalog/tom-ford-bitter-peach.png"
+                            alt="TOM FORD bitter peach"
+                            class="history-card__img history-card__img_main"
+                        />
+                        <img
+                            src="/images/catalog/thumb.png"
+                            alt="TOM FORD bitter peach original"
+                            class="history-card__img history-card__img_original"
+                        />
+                    </span>
+                    <h3>TOM FORD bitter peach</h3>
+                </a>
+                <a class="history-card" href="/product.html">
+                    <span>
+                        <img
+                            src="/images/catalog/tom-ford-lost-cherry.png"
+                            alt="TOM FORD lost cherry"
+                            class="history-card__img history-card__img_main"
+                        />
+                        <img
+                            src="/images/catalog/thumb.png"
+                            alt="TOM FORD lost cherry original"
+                            class="history-card__img history-card__img_original"
+                        />
+                    </span>
+                    <h3>TOM FORD lost cherry</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <aside class="filter">
+        <div class="filter__close"><svg
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M1.66836 14C1.24112 14 0.813876 13.8376 0.488993 13.5105C-0.162998 12.8585 -0.162998 11.8038 0.488993 11.1518L11.1523 0.488974C11.8043 -0.162991 12.859 -0.162991 13.511 0.488974C14.163 1.14094 14.163 2.19565 13.511 2.84762L2.84773 13.5105C2.52285 13.8376 2.09561 14 1.66836 14Z"
+        fill="#6F6F6F"
+    />
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12.3327 14C11.9057 14 11.4788 13.8377 11.1541 13.5109L0.488682 2.84536C-0.162894 2.19391 -0.162894 1.14003 0.488682 0.488585C1.14248 -0.162862 2.19657 -0.162862 2.84592 0.488585L13.5113 11.1541C14.1629 11.8055 14.1629 12.8594 13.5113 13.5109C13.1866 13.8377 12.7574 14 12.3327 14Z"
+        fill="#6F6F6F"
+    />
+</svg>
+</div>
+        <form class="filter__form">
+            <div class="filter__chunk">
+                <div class="filter__head">
+                    <div class="filter__head-wrapper">
+                        <p>Пол</p>
+                        <div class="filter__head-right">
+                            <label for="unisex">
+                                <input
+                                    type="checkbox"
+                                    name="unisex"
+                                    id="unisex"
+                                />
+                                <span class="fakecheck"></span>
+                                <span class="desc">унисекс</span>
+                            </label>
+                            <label for="men">
+                                <input type="checkbox" name="men" id="men" />
+                                <span class="fakecheck"></span>
+                                <span class="desc">мужской</span>
+                            </label>
+                            <label for="women">
+                                <input
+                                    type="checkbox"
+                                    name="women"
+                                    id="women"
+                                />
+                                <span class="fakecheck"></span>
+                                <span class="desc">женский</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="filter__reset">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="filter__chunk">
+                <div class="filter__head">
+                    <div class="filter__head-wrapper">
+                        <p>Цена</p>
+                        <div class="filter__head-right">
+                            <span>От 2 000</span>
+                            <span>До 20 000</span>
+                            <div class="filter__show">
+                                <svg
+    width="13"
+    height="25"
+    viewBox="0 0 13 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+>
+    <path
+        d="M0.900116 23.5703L12.0176 12.5006L0.900116 1.43098"
+        stroke="#4A4A4A"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="filter__reset">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="filter__body">
+                    <input type="range" name="range" id="range" />
+                </div>
+            </div>
+            <div class="filter__chunk">
+                <div class="filter__head">
+                    <div class="filter__head-wrapper">
+                        <p>Группа ароматов</p>
+                        <div class="filter__show">
+                            <svg
+    width="13"
+    height="25"
+    viewBox="0 0 13 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+>
+    <path
+        d="M0.900116 23.5703L12.0176 12.5006L0.900116 1.43098"
+        stroke="#4A4A4A"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                        </div>
+                    </div>
+                    <button class="filter__reset">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="filter__body">
+                    <label for="aldeg">
+                        <input type="checkbox" name="aldeg" id="aldeg" />
+                        <span class="fakecheck"></span>
+                        Альдегидные
+                    </label>
+                    <label for="water">
+                        <input type="checkbox" name="water" id="water" />
+                        <span class="fakecheck"></span>
+                        водные
+                    </label>
+                    <label for="eastern">
+                        <input type="checkbox" name="eastern" id="eastern" />
+                        <span class="fakecheck"></span>
+                        восточные
+                    </label>
+                    <label for="gourmet">
+                        <input type="checkbox" name="gourmet" id="gourmet" />
+                        <span class="fakecheck"></span>
+                        гурманские
+                    </label>
+                    <label for="lorem">
+                        <input type="checkbox" name="lorem" id="lorem" />
+                        <span class="fakecheck"></span>
+                        lorem
+                    </label>
+                    <label for="ipsum">
+                        <input type="checkbox" name="ipsum" id="ipsum" />
+                        <span class="fakecheck"></span>
+                        ipsum
+                    </label>
+                </div>
+            </div>
+            <div class="filter__chunk">
+                <div class="filter__head">
+                    <div class="filter__head-wrapper">
+                        <p>Ноты</p>
+                        <div class="filter__show">
+                            <svg
+    width="13"
+    height="25"
+    viewBox="0 0 13 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+>
+    <path
+        d="M0.900116 23.5703L12.0176 12.5006L0.900116 1.43098"
+        stroke="#4A4A4A"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                        </div>
+                    </div>
+                    <button class="filter__reset">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="filter__body">
+                    <label for="apricot">
+                        <input type="checkbox" name="apricot" id="apricot" />
+                        <span class="fakecheck"></span>
+                        Абрикос
+                    </label>
+                    <label for="quince">
+                        <input type="checkbox" name="quince" id="quince" />
+                        <span class="fakecheck"></span>
+                        айва
+                    </label>
+                    <label for="ambergris">
+                        <input
+                            type="checkbox"
+                            name="ambergris"
+                            id="ambergris"
+                        />
+                        <span class="fakecheck"></span>
+                        амбра
+                    </label>
+                    <label for="set">
+                        <input type="checkbox" name="set" id="set" />
+                        <span class="fakecheck"></span>
+                        set
+                    </label>
+                    <label for="dollar">
+                        <input type="checkbox" name="dollar" id="dollar" />
+                        <span class="fakecheck"></span>
+                        dollar
+                    </label>
+                </div>
+            </div>
+            <div class="filter__chunk">
+                <div class="filter__head">
+                    <div class="filter__head-wrapper">
+                        <p>Бренды</p>
+                        <div class="filter__show">
+                            <svg
+    width="13"
+    height="25"
+    viewBox="0 0 13 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+>
+    <path
+        d="M0.900116 23.5703L12.0176 12.5006L0.900116 1.43098"
+        stroke="#4A4A4A"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                        </div>
+                    </div>
+                    <button class="filter__reset">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="filter__body">
+                    <label for="chanel">
+                        <input type="checkbox" name="chanel" id="chanel" />
+                        <span class="fakecheck"></span>
+                        Chanel
+                    </label>
+                    <label for="tomford">
+                        <input type="checkbox" name="tomford" id="tomford" />
+                        <span class="fakecheck"></span>
+                        Tom Ford
+                    </label>
+                    <label for="gucci">
+                        <input type="checkbox" name="gucci" id="gucci" />
+                        <span class="fakecheck"></span>
+                        Gucci
+                    </label>
+                    <label for="dolce-gabbana">
+                        <input
+                            type="checkbox"
+                            name="dolce-gabbana"
+                            id="dolce-gabbana"
+                        />
+                        <span class="fakecheck"></span>
+                        Dolce & Gabbana
+                    </label>
+                    <label for="givenchy">
+                        <input type="checkbox" name="givenchy" id="givenchy" />
+                        <span class="fakecheck"></span>
+                        Givenchy
+                    </label>
+                </div>
+            </div>
+            <div class="filter__btns">
+                <button type="reset">Очистить фильтры</button>
+                <button class="btn btn_black" type="submit">
+                    <span>Применить</span>
+                    <svg
+    width="40"
+    height="40"
+    viewBox="0 0 40 40"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        d="M32.9167 19.5428H7.91667"
+        stroke="@@color"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M22.8337 9.50217L32.917 19.5422L22.8337 29.5838"
+        stroke="@@color"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                </button>
+            </div>
+        </form>
+    </aside>
 </main>
 
+        <div class="overlay"></div>
         <footer>
             <div class="container footer__container">
                 <div class="footer__contacts">
@@ -333,14 +1227,14 @@
                 <div class="section-separator section-separator_white"></div>
             </div>
         </footer>
-        <script src="../vendor/jquery.min.js" type="module"></script>
+        <script src="../vendor/js/jquery.min.js" type="module"></script>
         <script
-            src="../vendor/jquery.inputmask.bundle.min.js"
+            src="../vendor/js/jquery.inputmask.bundle.min.js"
             type="module"
         ></script>
-        <script src="../vendor/swiper-bundle.min.js"></script>
-        <script src="../vendor/fancybox.umd.js"></script>
-        <script src="../vendor/aos.js"></script>
+        <script src="../vendor/js/swiper-bundle.min.js"></script>
+        <script src="../vendor/js/fancybox.umd.js"></script>
+        <script src="../vendor/js/aos.js"></script>
         <script src="../js/script.js"></script>
         <script src="../js/catalog.js" type="module"></script>
     </body>

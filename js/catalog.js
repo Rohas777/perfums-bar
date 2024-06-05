@@ -37,4 +37,72 @@ $(document).ready(function () {
         $(".menu__subcategories button").removeClass("active");
         $(this).addClass("active");
     });
+
+    //NOTE - Переключение литража флакона
+
+    
+
+    $(".product-card__capacity-item").click(function () {
+
+        if ($(this).hasClass("active") || $(this).hasClass("not-avialable")) {
+
+            return;
+
+        }
+
+    
+
+        $(this)
+
+            .closest(".product-card__capacity")
+
+            .find(".product-card__capacity-item")
+
+            .removeClass("active");
+
+        $(this).addClass("active");
+
+    });
+
+    
+
+    //NOTE - Функционал кнопки фильтров
+
+    $(".menu__filter").click(function () {
+        turnOverlay(true);
+        $(this).addClass("active");
+        $(".filter").addClass("opened");
+    });
+
+    $(".overlay").click(function () {
+        turnOverlay(false);
+        $(".menu__filter").removeClass("active");
+        $(".filter").removeClass("opened");
+    });
+
+    $(".filter__close").click(function () {
+        turnOverlay(false);
+        $(".menu__filter").removeClass("active");
+        $(".filter").removeClass("opened");
+    });
+
+    //NOTE - Фльтры
+
+    $(".filter__head-wrapper").click(function () {
+        if (!$(this).find(".filter__show").length) return;
+
+        $(this)
+            .closest(".filter__chunk")
+            .find(".filter__body")
+            .slideToggle(300);
+        $(this).toggleClass("opened");
+    });
+
+    $(".filter__reset").click(function (e) {
+        e.preventDefault();
+        $(this).closest(".filter__chunk").find("input").prop("checked", false);
+        console.log(
+            $(this).closest(".filter__chunk").find("input").prop("checked")
+        );
+    });
 });
