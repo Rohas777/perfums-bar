@@ -42,6 +42,16 @@ $(document).ready(function () {
 
     });
 
+    $(".offer-advantage__close").click(function () {
+
+        $(".offer-advantage__full").fadeOut(600);
+
+        $(".offer-advantage__full").removeClass("active");
+
+        switchScroll();
+
+    });
+
     $(document).on("mouseup", function (e) {
 
         if (

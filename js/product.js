@@ -6,7 +6,7 @@ $(document).ready(function () {
     //NOTE - Кнопка оригинального бренда
 
     $(".product__orig-button").click(function () {
-        $(".product__original a").slideToggle(400);
+        $(".product__image_original").toggleClass("active");
     });
 
     //NOTE - Счётчик товаров
