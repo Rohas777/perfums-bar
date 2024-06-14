@@ -81,7 +81,7 @@ $(document).ready(function () {
 
     
 
-    $(".product-card__fav").click(function () {
+    $(".fav-button").click(function () {
 
         $(this).toggleClass("added");
 
