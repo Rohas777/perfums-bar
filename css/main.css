@@ -1245,6 +1245,7 @@ main {
 .offer__content h1 {
   font-family: var(--title-font);
   font-size: 64px;
+  text-transform: uppercase;
 }
 
 .offer__content h2 {
