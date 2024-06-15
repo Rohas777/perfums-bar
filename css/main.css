@@ -2177,6 +2177,7 @@ main {
 .about__img {
   max-width: 65.7%;
   position: relative;
+  aspect-ratio: 44/25;
 }
 
 .about__img::after {
@@ -2192,7 +2193,9 @@ main {
 
 .about__img img {
   width: 100%;
-  aspect-ratio: 44/25;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .about__text {

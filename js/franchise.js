@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    //NOTE - Инициализация галлерей
+
+    Fancybox.bind("[data-fancybox]", {});
+
     //NOTE - Слайдер в оффере
 
     const offerSwiper = new Swiper(".offer__slider", {
@@ -58,5 +62,21 @@ $(document).ready(function () {
         ];
 
         console.log(checkForm(inputs));
+    });
+
+    //NOTE - Слайдер магазинов
+
+    const storesSwiper = new Swiper(".stores__slider", {
+        slidesPerView: 4,
+        spaceBetween: 40,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+
+        navigation: {
+            nextEl: ".stores__swiper-container .swiper-button-next",
+            prevEl: ".stores__swiper-container .swiper-button-prev",
+        },
     });
 });
