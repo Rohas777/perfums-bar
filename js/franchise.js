@@ -33,4 +33,30 @@ $(document).ready(function () {
             "slow"
         );
     });
+
+    //NOTE - Сброс состояния ошибки у инпутов при вводе
+
+    $("input").on("input", removeInputErrorState);
+
+    //NOTE - Форма заявки вопроса в UTP2
+
+    $("#feedback").submit(function (e) {
+        e.preventDefault();
+
+        const inputs = [
+            {
+                name: "name",
+                elem: $("#feedback-name"),
+                value: $("#feedback-name").val().trim(),
+                errorText: "Пожалуйста, укажите ваше имя",
+            },
+            {
+                name: "tel",
+                elem: $("#feedback-tel"),
+                value: $("#feedback-tel").val().trim(),
+            },
+        ];
+
+        console.log(checkForm(inputs));
+    });
 });

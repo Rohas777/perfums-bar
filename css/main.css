@@ -2616,6 +2616,7 @@ main {
   width: 330px;
   aspect-ratio: 33/46;
   object-fit: cover;
+  border: 1px solid #000;
 }
 
 .certs .swiper-slide-next {
@@ -2630,11 +2631,11 @@ main {
 .certs .swiper-slide-next ~ *,
 .certs .swiper-slide-active {
   z-index: 3 !important;
-  -moz-transform: translate(0, 0) scale(0.82);
-  -ms-transform: translate(0, 0) scale(0.82);
-  -webkit-transform: translate(0, 0) scale(0.82);
-  -o-transform: translate(0, 0) scale(0.82);
-  transform: translate(0, 0) scale(0.82);
+  -moz-transform: translate(0, 0) scale(0.8);
+  -ms-transform: translate(0, 0) scale(0.8);
+  -webkit-transform: translate(0, 0) scale(0.8);
+  -o-transform: translate(0, 0) scale(0.8);
+  transform: translate(0, 0) scale(0.8);
 }
 
 .certs .swiper-nav {
