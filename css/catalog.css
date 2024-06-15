@@ -420,6 +420,7 @@ h6 {
 .breadcrumbs p {
   color: #c6c6c6;
   font-size: 20px;
+  text-transform: lowercase;
 }
 
 .breadcrumbs a {
@@ -428,6 +429,10 @@ h6 {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
+}
+
+.breadcrumbs a:first-of-type {
+  text-transform: capitalize;
 }
 
 .breadcrumbs a:hover {
@@ -1839,12 +1844,37 @@ main {
   border-radius: 50%;
 }
 
+.catalog__nav svg {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
 .catalog__nav_prev {
   border: 1px solid #000000;
 }
 
+.catalog__nav_prev:hover svg {
+  -moz-transform: translate(-5px, 0) rotate(180deg);
+  -ms-transform: translate(-5px, 0) rotate(180deg);
+  -webkit-transform: translate(-5px, 0) rotate(180deg);
+  -o-transform: translate(-5px, 0) rotate(180deg);
+  transform: translate(-5px, 0) rotate(180deg);
+}
+
 .catalog__nav_next path {
   stroke: #ffffff;
+}
+
+.catalog__nav_next:hover svg {
+  transform: translate(5px, 0);
+  -moz-transform: translate(5px, 0);
+  -ms-transform: translate(5px, 0);
+  -webkit-transform: translate(5px, 0);
+  -o-transform: translate(5px, 0);
+  transform: translate(5px, 0);
 }
 
 .filter {

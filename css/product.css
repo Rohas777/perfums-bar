@@ -420,6 +420,7 @@ h6 {
 .breadcrumbs p {
   color: #c6c6c6;
   font-size: 20px;
+  text-transform: lowercase;
 }
 
 .breadcrumbs a {
@@ -428,6 +429,10 @@ h6 {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
+}
+
+.breadcrumbs a:first-of-type {
+  text-transform: capitalize;
 }
 
 .breadcrumbs a:hover {
