@@ -737,12 +737,10 @@ h6 {
 
 .alignleft {
   float: left;
-  margin: 14px 35px 0 0;
 }
 
 .alignright {
   float: right;
-  margin: 0 0 35px 35px;
 }
 
 .aligncenter {
@@ -1401,6 +1399,14 @@ main {
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 30px;
+}
+
+.content .alignleft {
+  margin: 14px 35px 0 0;
+}
+
+.content .alignright {
+  margin: 0 0 35px 35px;
 }
 
 .advantages {

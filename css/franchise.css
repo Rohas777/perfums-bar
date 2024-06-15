@@ -737,12 +737,10 @@ h6 {
 
 .alignleft {
   float: left;
-  margin: 14px 35px 0 0;
 }
 
 .alignright {
   float: right;
-  margin: 0 0 35px 35px;
 }
 
 .aligncenter {
