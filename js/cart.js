@@ -1,12 +1,8 @@
 $(document).ready(function () {
-    //NOTE - Инициализация галлерей
+    //NOTE - Кнопка избранного
 
-    Fancybox.bind("[data-fancybox]", {});
-
-    //NOTE - Кнопка оригинального бренда
-
-    $(".product__orig-button").click(function () {
-        $(".product__image_original").toggleClass("active");
+    $(".fav-button").click(function () {
+        $(this).toggleClass("added");
     });
 
     //NOTE - Инициализация счётчика
@@ -69,24 +65,21 @@ $(document).ready(function () {
         counterContainer.find("span").text(productCount);
     });
 
-    //NOTE - Кнопка "В избранное"
+    //NOTE - Слайдер товаров
 
-    $(".fav-button").click(function () {
-        $(this).toggleClass("added");
-    });
+    if ($(".product-card-cart").length > 3) {
+        const cartSwiper = new Swiper(".cart__slider", {
+            slidesPerView: 3,
+            spaceBetween: 35,
 
-    //NOTE - Слайдер похожих товаров
-
-    const similarSwiper = new Swiper(".similar__slider", {
-        slidesPerView: 3,
-        spaceBetween: 35,
-        loop: true,
-
-        navigation: {
-            nextEl: ".similar__slider .swiper-button-next",
-            prevEl: ".similar__slider .swiper-button-prev",
-        },
-    });
+            navigation: {
+                nextEl: ".cart .swiper-button-next",
+                prevEl: ".cart .swiper-button-prev",
+            },
+        });
+    } else {
+        $(".cart").addClass("disabled");
+    }
 
     //NOTE - Слайдер рекомендуемых товаров
 

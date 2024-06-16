@@ -380,6 +380,11 @@ h6 {
   width: auto;
   height: auto;
   object-fit: none;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 }
 
 .swiper-nav-item path {
@@ -401,6 +406,23 @@ h6 {
 
 .swiper-nav-item::after {
   content: "";
+}
+
+.swiper-button-prev:hover svg {
+  -moz-transform: translate(-5px, 0) rotate(180deg);
+  -ms-transform: translate(-5px, 0) rotate(180deg);
+  -webkit-transform: translate(-5px, 0) rotate(180deg);
+  -o-transform: translate(-5px, 0) rotate(180deg);
+  transform: translate(-5px, 0) rotate(180deg);
+}
+
+.swiper-button-next:hover svg {
+  transform: translate(5px, 0);
+  -moz-transform: translate(5px, 0);
+  -ms-transform: translate(5px, 0);
+  -webkit-transform: translate(5px, 0);
+  -o-transform: translate(5px, 0);
+  transform: translate(5px, 0);
 }
 
 .section-separator {
@@ -1643,7 +1665,7 @@ main {
   flex-shrink: 0;
 }
 
-.product__counter {
+.product .counter {
   padding: 11px 0;
   display: -webkit-box;
   display: -moz-box;
@@ -1656,7 +1678,7 @@ main {
   align-self: stretch;
 }
 
-.product__counter-control {
+.product .counter-control {
   border: 1px solid #000000;
   display: -webkit-box;
   display: -moz-box;
@@ -1677,13 +1699,13 @@ main {
   transition: all 0.3s ease-out 0s;
 }
 
-.product__counter-control:not(.disabled):hover {
+.product .counter-control:not(.disabled):hover {
   background-color: var(--red);
   border-color: var(--red);
   color: #fff;
 }
 
-.product__counter-control:not(.disabled):active {
+.product .counter-control:not(.disabled):active {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -webkit-transform: scale(1.2);
@@ -1691,7 +1713,7 @@ main {
   transform: scale(1.2);
 }
 
-.product__counter-control.disabled {
+.product .counter-control.disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }

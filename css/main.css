@@ -382,6 +382,11 @@ h6 {
   width: auto;
   height: auto;
   object-fit: none;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 }
 
 .swiper-nav-item path {
@@ -403,6 +408,23 @@ h6 {
 
 .swiper-nav-item::after {
   content: "";
+}
+
+.swiper-button-prev:hover svg {
+  -moz-transform: translate(-5px, 0) rotate(180deg);
+  -ms-transform: translate(-5px, 0) rotate(180deg);
+  -webkit-transform: translate(-5px, 0) rotate(180deg);
+  -o-transform: translate(-5px, 0) rotate(180deg);
+  transform: translate(-5px, 0) rotate(180deg);
+}
+
+.swiper-button-next:hover svg {
+  transform: translate(5px, 0);
+  -moz-transform: translate(5px, 0);
+  -ms-transform: translate(5px, 0);
+  -webkit-transform: translate(5px, 0);
+  -o-transform: translate(5px, 0);
+  transform: translate(5px, 0);
 }
 
 .section-separator {
