@@ -145,9 +145,9 @@ h6 {
 
 :root {
   --index: calc(1vw + 1vh);
-  --main-font: "Futura", sans-serif;
-  --title-font: "BBT", serif;
-  --subtitle-font: "Helvetica", sans-serif;
+  --futura: "Futura", sans-serif;
+  --bbt: "BBT", serif;
+  --helvetica: "Helvetica", sans-serif;
   --header-height: 95px;
   --black: #0b0f10;
   --white: #ffffff;
@@ -265,7 +265,7 @@ h6 {
 }
 
 .title {
-  font-family: var(--title-font);
+  font-family: var(--bbt);
   font-size: 48px;
   color: #000000;
   text-transform: uppercase;
@@ -964,7 +964,7 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--subtitle-font);
+  font-family: var(--helvetica);
   font-weight: bold;
   font-size: 15px;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -1155,7 +1155,7 @@ footer .section-separator {
 }
 
 body {
-  font-family: var(--main-font);
+  font-family: var(--futura);
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1246,13 +1246,13 @@ main {
 }
 
 .offer__content h1 {
-  font-family: var(--title-font);
+  font-family: var(--bbt);
   font-size: 64px;
   text-transform: uppercase;
 }
 
 .offer__content h2 {
-  font-family: var(--subtitle-font);
+  font-family: var(--helvetica);
   font-size: 24px;
   font-weight: 300;
   text-transform: uppercase;
@@ -1341,7 +1341,7 @@ main {
 }
 
 .offer-advantage__text {
-  font-family: var(--main-font);
+  font-family: var(--futura);
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -2219,7 +2219,7 @@ main {
 }
 
 .about__text span {
-  font-family: var(--title-font);
+  font-family: var(--bbt);
   font-size: 40px;
   text-transform: uppercase;
   line-height: normal;
@@ -2402,7 +2402,7 @@ main {
 .utp2 input,
 .utp2 input::placeholder {
   color: #ffffff;
-  font-family: var(--main-font);
+  font-family: var(--futura);
   font-weight: 400;
   font-size: 20px;
   line-height: normal;
