@@ -1395,6 +1395,11 @@ main {
   transition: all 0.3s ease-out 0s;
   backdrop-filter: blur(4px);
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 }
 
 .offer__slide-down svg {
@@ -1406,7 +1411,17 @@ main {
 }
 
 .offer__slide-down path {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
   stroke: #000000;
+}
+
+.offer__slide-down:hover {
+  background-color: var(--red);
+  border-color: var(--red);
 }
 
 .offer__slide-down:hover svg {
@@ -1415,6 +1430,10 @@ main {
   -webkit-transform: translate(0, 5px) rotate(90deg);
   -o-transform: translate(0, 5px) rotate(90deg);
   transform: translate(0, 5px) rotate(90deg);
+}
+
+.offer__slide-down:hover path {
+  stroke: #fff;
 }
 
 .advantages {

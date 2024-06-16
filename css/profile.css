@@ -1619,6 +1619,7 @@ main {
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 5px;
+  display: block;
 }
 
 .main__profile-item p {
@@ -1634,6 +1635,10 @@ main {
   display: flex;
   align-items: center;
   gap: 13px;
+}
+
+.main__profile-item_sex span {
+  margin-bottom: 0;
 }
 
 .main__profile-item_sex span:last-of-type {
