@@ -30,7 +30,12 @@ function validateEmail(email) {
 
 //NOTE - Функция вызыва сообщения об ошибке
 
-function showMessage(elem, text) {
+function showMessage(elem, text, isPayment) {
+    if (isPayment) {
+        elem.addClass("error").text(text);
+        return;
+    }
+
     if (!elem.hasClass("error")) {
         elem.addClass("error").text(text).slideDown(300);
         return;
@@ -43,18 +48,60 @@ function showMessage(elem, text) {
 
 //NOTE - Функция проверки инпута для вывода сообщения
 
-function checkInputForMessage(input, inputVal, errorText) {
-    const message = input.closest("form").find(".message");
+function checkInputForMessage(input, inputVal, errorText, isPayment) {
+    const messageWrapper = input.closest(".message-wrapper");
+    const message = messageWrapper.find(".message");
     if (!inputVal) {
-        showMessage(message, errorText);
+        showMessage(message, errorText, isPayment);
         return false;
     }
     if (input.attr("data-type") == "email" && !validateEmail(inputVal)) {
-        showMessage(message, "Пожалуйста, введите корректный Email");
+        showMessage(message, "Пожалуйста, введите корректный Email", isPayment);
+        return false;
+    }
+    if (input.attr("data-type") == "tel" && !input.inputmask("isComplete")) {
+        showMessage(
+            message,
+            "Пожалуйста, введите корректный номер телефона",
+            isPayment
+        );
         return false;
     }
 
     return true;
+}
+
+//NOTE - Функция проверки инпута для изменения состояния intime
+
+function checkIntimeInput(
+    input,
+    inputVal,
+    errorText = "Вам необходимо корректно заполнить поля",
+    isPayment
+) {
+    const messageWrapper = input.closest(".message-wrapper");
+    const message = messageWrapper.find(".message");
+
+    if (input.attr("data-type") == "tel" && !input.inputmask("isComplete")) {
+        input.addClass("error");
+        messageWrapper.addClass("error");
+    }
+    if (!inputVal) {
+        input.addClass("error");
+        messageWrapper.addClass("error");
+    }
+    if (input.attr("data-type") == "email" && !validateEmail(inputVal)) {
+        input.addClass("error");
+        messageWrapper.addClass("error");
+    }
+
+    if (!checkInputForMessage(input, inputVal, errorText, isPayment))
+        return false;
+
+    input.removeClass("error");
+    messageWrapper.removeClass("error");
+    message.removeClass("error");
+    return inputVal;
 }
 
 //NOTE - Функция проверки инпута для изменения состояния
@@ -62,23 +109,33 @@ function checkInputForMessage(input, inputVal, errorText) {
 function checkInput(
     input,
     inputVal,
-    errorText = "Вам необходимо корректно заполнить поля"
+    errorText = "Вам необходимо корректно заполнить поля",
+    isPayment
 ) {
-    const message = input.closest("form").find(".message");
+    const messageWrapper = input.closest(".message-wrapper");
+    const message = messageWrapper.find(".message");
 
+    if (input.attr("data-type") == "tel" && !input.inputmask("isComplete")) {
+        input.addClass("error");
+        messageWrapper.addClass("error");
+    }
     if (!inputVal) {
         input.addClass("error");
+        messageWrapper.addClass("error");
     }
     if (input.attr("data-type") == "email" && !validateEmail(inputVal)) {
         input.addClass("error");
+        messageWrapper.addClass("error");
     }
     if (message.hasClass("error")) {
         return;
     }
 
-    if (!checkInputForMessage(input, inputVal, errorText)) return false;
+    if (!checkInputForMessage(input, inputVal, errorText, isPayment))
+        return false;
 
     input.removeClass("error");
+    messageWrapper.removeClass("error");
     message.removeClass("error").slideUp(300);
     return inputVal;
 }
@@ -87,19 +144,59 @@ function checkInput(
 
 function removeInputErrorState() {
     $(this).removeClass("error");
-    $(this).closest("form").find(".message").removeClass("error").slideUp(300);
+    $(this)
+        .closest(".message-wrapper")
+        .removeClass("error")
+        .find(".message")
+        .removeClass("error")
+        .slideUp(300);
+}
+
+//NOTE - Функция сброса состояния ошибки у текущего инпута формы оплаты
+
+function removeInputErrorStatePayment() {
+    const input = $(this),
+        inputVal = input.val().trim();
+    let check = checkIntimeInput(
+        input,
+        inputVal,
+        "Вам необходимо корректно заполнить это поле",
+        true
+    );
+
+    if (check) {
+        $(this).removeClass("error").addClass("success");
+        $(this)
+            .closest(".message-wrapper")
+            .removeClass("error")
+            .addClass("success")
+            .find(".message")
+            .text("Успешно")
+            .removeClass("error")
+            .addClass("success");
+    } else {
+        $(this).removeClass("error").addClass("success");
+        $(this)
+            .closest(".message-wrapper")
+            .removeClass("success")
+            .addClass("error")
+            .find(".message")
+            .removeClass("success")
+            .addClass("error");
+    }
 }
 
 //NOTE - Функция проверки формы
 
-function checkForm(inputs) {
+function checkForm(inputs, isPayment = false) {
     let response = {};
 
     inputs.forEach((input) => {
         response[input.name] = checkInput(
             input.elem,
             input.value,
-            input.errorText
+            input.errorText,
+            isPayment
         );
     });
     for (let elem in response) {

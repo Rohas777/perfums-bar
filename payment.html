@@ -162,18 +162,18 @@
             </p>
         </div>
     </section>
-    <div class="payment">
+    <section class="payment">
         <div class="container">
             <div class="payment__head">
                 <h2 class="title">Оплата</h2>
                 <span class="separator"></span>
                 <span class="payment__count">3 шт</span>
             </div>
-            <div class="payment__wrapper">
+            <form id="paymentForm" class="payment__wrapper">
                 <div class="payment__data">
                     <h3>заполните данные</h3>
                     <div class="payment__block">
-                        <label for="paymentName" class="success">
+                        <label for="paymentName" class="message-wrapper">
                             <input
                                 type="text"
                                 name="paymentName"
@@ -226,7 +226,7 @@
                                 <p class="message">Успешно</p>
                             </div>
                         </label>
-                        <label for="paymentSurname" class="success">
+                        <label for="paymentSurname" class="message-wrapper">
                             <input
                                 type="text"
                                 name="paymentSurname"
@@ -279,7 +279,7 @@
                                 <p class="message">Успешно</p>
                             </div>
                         </label>
-                        <label for="paymentMiddlename" class="success">
+                        <label for="paymentMiddlename" class="message-wrapper">
                             <input
                                 type="text"
                                 name="paymentMiddlename"
@@ -332,12 +332,13 @@
                                 <p class="message">Успешно</p>
                             </div>
                         </label>
-                        <label for="paymentTel" class="failure">
+                        <label for="paymentTel" class="message-wrapper">
                             <input
                                 type="tel"
+                                data-type="tel"
                                 name="paymentTel"
                                 id="paymentTel"
-                                placeholder="+7 (999) 000 00 00"
+                                placeholder="+7 (XXX) XXX XX XX"
                             />
                             <div class="payment__marker">
                                 <svg
@@ -387,9 +388,10 @@
                                 </p>
                             </div>
                         </label>
-                        <label for="paymentEmail">
+                        <label for="paymentEmail" class="message-wrapper">
                             <input
-                                type="email"
+                                type="text"
+                                data-type="email"
                                 name="paymentEmail"
                                 id="paymentEmail"
                                 placeholder="Ваш e-mail"
@@ -440,7 +442,7 @@
                                 <p class="message"></p>
                             </div>
                         </label>
-                        <label for="paymentRegion">
+                        <label for="paymentRegion" class="message-wrapper">
                             <input
                                 type="text"
                                 name="paymentRegion"
@@ -493,7 +495,7 @@
                                 <p class="message"></p>
                             </div>
                         </label>
-                        <label for="paymentAddress">
+                        <label for="paymentAddress" class="message-wrapper">
                             <input
                                 type="text"
                                 name="paymentAddress"
@@ -602,6 +604,7 @@
                                     type="radio"
                                     name="paymentType"
                                     id="paymentSbp"
+                                    value="Оплатить через СБП"
                                 />
                                 <span class="checkmark"></span>
                                 СБП
@@ -611,6 +614,7 @@
                                     type="radio"
                                     name="paymentType"
                                     id="paymentQr"
+                                    value="Оплатить по QR-коду"
                                     checked
                                 />
                                 <span class="checkmark"></span>
@@ -621,6 +625,7 @@
                                     type="radio"
                                     name="paymentType"
                                     id="paymentOnline"
+                                    value="Оплатить онлайн"
                                 />
                                 <span class="checkmark"></span>
                                 Оплата онлайн
@@ -636,9 +641,27 @@
                         </button>
                     </div>
                 </div>
+            </form>
+        </div>
+    </section>
+    <section class="qr-popup payment-popup">
+        <div class="payment-popup__close">
+            <span></span>
+        </div>
+        <div class="payment-popup__content">
+            <h2>Оплатить по qr-коду</h2>
+            <p>Сканируйте QR-код для оплаты заказа</p>
+            <ol>
+                <li>Наведите камеру телефона на изображение</li>
+                <li>Подтвердите переход в Ваш банк</li>
+                <li>Подтвердите оплату</li>
+            </ol>
+            <div class="qr-popup__qr">
+                <img src="/images/qr.png" alt="" />
             </div>
         </div>
-    </div>
+    </section>
+    <div class="overlay"></div>
 </main>
 
         <div class="overlay"></div>

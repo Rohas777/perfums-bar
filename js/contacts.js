@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    //NOTE - Инициализация телефонных масок
+
+    let $telInput = $("[type='tel']");
+
+    $telInput.inputmask({
+        mask: "+7 (999) 999 99 99",
+        placeholder: "+7 (XXX) XXX XX XX",
+    });
+
     //NOTE - Сброс состояния ошибки у инпутов при вводе
 
     $("input").on("input", removeInputErrorState);

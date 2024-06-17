@@ -251,6 +251,14 @@ h6 {
   overflow: hidden !important;
 }
 
+input[type=tel] {
+  font-family: var(--helvetica) !important;
+}
+
+input[type=tel]::placeholder {
+  font-family: var(--helvetica) !important;
+}
+
 .overlay {
   width: 100%;
   height: 100%;

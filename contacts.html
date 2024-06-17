@@ -296,7 +296,7 @@
         <div class="container">
             <div class="utp__follow">
                 <h2 class="title">Подписаться</h2>
-                <form id="follow">
+                <form id="follow" class="message-wrapper">
                     <p class="utp__desc">
                         Акции, промокоды и новинки каждую неделю
                     </p>
@@ -341,7 +341,7 @@
                 <h2 class="title">Обратная связь</h2>
                 <form id="feedback">
                     <p class="utp__desc">Оставьте свой комментрий</p>
-                    <div class="utp__feedback-wrapper">
+                    <div class="utp__feedback-wrapper message-wrapper">
                         <input
                             type="text"
                             name="feedback-name"
@@ -352,7 +352,8 @@
                             type="tel"
                             name="feedback-tel"
                             id="feedback-tel"
-                            placeholder="Номер телефона"
+                            data-type="tel"
+                            placeholder="+7 (XXX) XXX XX XX"
                         />
                         <p class="message"></p>
                         <button type="submit" class="btn">
