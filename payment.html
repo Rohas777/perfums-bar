@@ -644,24 +644,48 @@
             </form>
         </div>
     </section>
-    <section class="qr-popup payment-popup">
-        <div class="payment-popup__close">
-            <span></span>
-        </div>
-        <div class="payment-popup__content">
-            <h2>Оплатить по qr-коду</h2>
-            <p>Сканируйте QR-код для оплаты заказа</p>
-            <ol>
-                <li>Наведите камеру телефона на изображение</li>
-                <li>Подтвердите переход в Ваш банк</li>
-                <li>Подтвердите оплату</li>
-            </ol>
-            <div class="qr-popup__qr">
-                <img src="/images/qr.png" alt="" />
+    <section class="qr-popup payment-popup overlay">
+        <div class="payment-popup__wrapper qr-popup__wrapper">
+            <div class="payment-popup__close">
+                <span></span>
+            </div>
+            <div class="payment-popup__content">
+                <h2>Оплатить по qr-коду</h2>
+                <p>Сканируйте QR-код для оплаты заказа</p>
+                <ol>
+                    <li>Наведите камеру телефона на изображение</li>
+                    <li>Подтвердите переход в Ваш банк</li>
+                    <li>Подтвердите оплату</li>
+                </ol>
+                <div class="qr-popup__qr">
+                    <img src="/images/qr.png" alt="" />
+                </div>
             </div>
         </div>
     </section>
-    <div class="overlay"></div>
+    <section class="success-popup payment-popup overlay">
+        <div class="payment-popup__wrapper success-popup__wrapper">
+            <div class="payment-popup__close">
+                <span></span>
+            </div>
+            <div class="payment-popup__content">
+                <h2>Оплата успешно прошла</h2>
+                <div class="success-popup__links">
+                    <a href="/catalog.html" title="К каталогу"
+                        >Вернуться в каталог</a
+                    >
+                    <a href="/profile.html" title="К истории заказов"
+                        >Посмотреть историю заказов</a
+                    >
+                </div>
+                <img
+                    src="/images/bg/popup1.png"
+                    class="success-popup__bg"
+                    alt=""
+                />
+            </div>
+        </div>
+    </section>
 </main>
 
         <div class="overlay"></div>

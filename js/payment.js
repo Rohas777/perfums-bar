@@ -1,14 +1,13 @@
 function turnPaymentPopup(popup, turn) {
     if (turn) {
         popup.fadeIn(400).addClass("active");
-        turnOverlay(true);
+        switchScroll();
         return;
     }
 
-    $(".payment-popup").fadeOut(600);
-    $(".payment-popup").removeClass("active");
+    popup.fadeOut(600);
+    popup.removeClass("active");
     switchScroll();
-    turnOverlay();
 }
 
 $(document).ready(function () {
@@ -96,17 +95,14 @@ $(document).ready(function () {
 
         switch (paymentType) {
             case "paymentQr":
-                // Код, который будет выполнен, если expression === value1
                 turnPaymentPopup($(".qr-popup"), true);
                 break;
-            case "paymentOnline":
-                // Код, который будет выполнен, если expression === value2
-                break;
-            case "paymentSbp":
-                // Код, который будет выполнен, если expression === value2
-                break;
+            // case "paymentOnline":
+            //     break;
+            // case "paymentSbp":
+            //     break;
             default:
-            // Код, который будет выполнен, если ни одно из условий не совпало
+                turnPaymentPopup($(".success-popup"), true);
         }
     });
 
@@ -115,15 +111,17 @@ $(document).ready(function () {
     });
 
     $(document).on("mouseup", function (e) {
+        let popup = $(".payment-popup.active");
+
         if (
-            !$(".payment-popup").is(e.target) &&
-            !$(".payment-popup").find(e.target).length &&
-            $(".payment-popup").hasClass("active")
+            !popup.find(".payment-popup__wrapper").is(e.target) &&
+            !popup.find(".payment-popup__wrapper").find(e.target).length &&
+            popup.hasClass("active")
         ) {
-            turnPaymentPopup();
+            turnPaymentPopup(popup, false);
         }
     });
     $(".payment-popup__close").click(function (e) {
-        turnPaymentPopup();
+        turnPaymentPopup($(this).closest(".payment-popup"), false);
     });
 });
