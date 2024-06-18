@@ -28,6 +28,56 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
+//NOTE - Функция валидации пароля
+
+function validatePassword(password) {
+    // Регулярное выражение для проверки:
+    // - Минимум одна буква: [a-zA-Z]
+    // - Минимум одна цифра: \d
+    // - Минимум 8 символов:.{8,}
+    // - Минимум одна заглавная буква: [A-Z]
+    // - Только латинские символы: [a-zA-Z\d]
+    var regex = /^[a-zA-Z\d]{8,}$/;
+
+    return regex.test(password);
+}
+
+//NOTE - Функция валидации повтора пароля
+
+function validatePasswordRepeat(input, password) {
+    const passOriginal = input.closest("form").find(".original-pass");
+
+    return password === passOriginal.val();
+}
+
+//NOTE - Функция валидации даты
+
+function validateBirthDate(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+
+    // Проверяем, что дата существует и не превышает сегодняшнюю дату
+    if (isNaN(birthDate.getTime()) || birthDate > today) {
+        return false;
+    }
+
+    // Вычисляем разницу в годах
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+
+    // Учитываем разницу в месяцах, учитывая, что месяцы считаются с нуля
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    // Проверяем, что возраст не превышает 80 лет
+    if (age <= 80) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 //NOTE - Функция вызыва сообщения об ошибке
 
 function showMessage(elem, text, isPayment) {
@@ -59,6 +109,32 @@ function checkInputForMessage(input, inputVal, errorText, isPayment) {
         showMessage(message, "Пожалуйста, введите корректный Email", isPayment);
         return false;
     }
+    if (
+        input.attr("data-type") == "signup-pass" &&
+        !validatePassword(inputVal)
+    ) {
+        showMessage(
+            message,
+            "Пожалуйста, введите корректный пароль",
+            isPayment
+        );
+        return false;
+    }
+    if (
+        input.attr("data-type") == "signup-pass-repeat" &&
+        !validatePasswordRepeat(input, inputVal)
+    ) {
+        showMessage(message, "Пароли должны совпадать", isPayment);
+        return false;
+    }
+    if (input.attr("data-type") == "birth" && !validateBirthDate(inputVal)) {
+        showMessage(
+            message,
+            "Пожалуйста, введите корректную дату рождения",
+            isPayment
+        );
+        return false;
+    }
     if (input.attr("data-type") == "tel" && !input.inputmask("isComplete")) {
         showMessage(
             message,
@@ -82,11 +158,11 @@ function checkIntimeInput(
     const messageWrapper = input.closest(".message-wrapper");
     const message = messageWrapper.find(".message");
 
-    if (input.attr("data-type") == "tel" && !input.inputmask("isComplete")) {
+    if (!inputVal) {
         input.addClass("error");
         messageWrapper.addClass("error");
     }
-    if (!inputVal) {
+    if (input.attr("data-type") == "tel" && !input.inputmask("isComplete")) {
         input.addClass("error");
         messageWrapper.addClass("error");
     }
@@ -124,6 +200,24 @@ function checkInput(
         messageWrapper.addClass("error");
     }
     if (input.attr("data-type") == "email" && !validateEmail(inputVal)) {
+        input.addClass("error");
+        messageWrapper.addClass("error");
+    }
+    if (
+        input.attr("data-type") == "signup-pass" &&
+        !validatePassword(inputVal)
+    ) {
+        input.addClass("error");
+        messageWrapper.addClass("error");
+    }
+    if (
+        input.attr("data-type") == "signup-pass-repeat" &&
+        !validatePasswordRepeat(input, inputVal)
+    ) {
+        input.addClass("error");
+        messageWrapper.addClass("error");
+    }
+    if (input.attr("data-type") == "birth" && !validateBirthDate(inputVal)) {
         input.addClass("error");
         messageWrapper.addClass("error");
     }

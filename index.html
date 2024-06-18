@@ -473,9 +473,9 @@
                     парфюмерном гардеробе, помогая сэкономить твои деньги!
                 </p>
             </div>
-            <a href="/signup.html" class="btn">
+            <button class="btn auth-popup-open">
                 <span>Зарегистрироваться</span>
-            </a>
+            </button>
         </div>
     </section>
     <section class="services">
@@ -1241,6 +1241,289 @@
     </div>
 </div>
 
+    <aside class="auth-popup">
+    <div class="auth-popup__wrapper">
+        <div class="auth-popup__container">
+            <div class="auth-popup__logo">
+                <img
+                    src="/images/popup-logo.png"
+                    alt="Perfums Bar Авторизация"
+                />
+            </div>
+            <div class="auth-popup__close">
+                <span></span>
+            </div>
+            <div class="auth-popup__content">
+                <div class="auth-popup__switcher">
+                    <button
+                        data-switch="signin"
+                        class="auth-popup__switch btn active"
+                    >
+                        Вход
+                    </button>
+                    <button data-switch="signup" class="auth-popup__switch btn">
+                        Регистрация
+                    </button>
+                </div>
+                <form
+                    id="signin"
+                    class="auth-popup__form auth-popup__form_signin active"
+                    data-auth-type="tel"
+                >
+                    <div
+                        class="message-wrapper auth-popup__item auth-popup__item_signin-email-tel"
+                    >
+                        <button class="auth-popup__signin-switch">
+                            Войти по e-mail
+                        </button>
+                        <div class="auth-popup__item-wrapper">
+                            <input
+                                class="active"
+                                placeholder="+7 (XXX) XXX XX XX"
+                                type="tel"
+                                data-type="tel"
+                                data-desc="Войти с помощью телефона"
+                                name="signin-tel"
+                                id="signin-tel"
+                            />
+                            <input
+                                placeholder="Ваш e-mail"
+                                type="text"
+                                data-desc="Войти по e-mail"
+                                data-type="email"
+                                name="signin-email"
+                                id="signin-email"
+                            />
+                        </div>
+                        <div class="message"></div>
+                    </div>
+                    <div
+                        class="message-wrapper auth-popup__item auth-popup__item_pass"
+                    >
+                        <div class="auth-popup__item-wrapper">
+                            <input
+                                placeholder="Пароль"
+                                type="password"
+                                name="signin-pass"
+                                id="signin-pass"
+                            />
+                            <button class="show-pass">
+                                <svg
+    width="21"
+    height="17"
+    viewBox="0 0 21 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M13.4114 8.3022C13.4114 10.0482 11.9954 11.4632 10.2494 11.4632C8.50338 11.4632 7.08838 10.0482 7.08838 8.3022C7.08838 6.5552 8.50338 5.1402 10.2494 5.1402C11.9954 5.1402 13.4114 6.5552 13.4114 8.3022Z"
+        stroke="#C6C6C6"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M10.248 15.604C14.056 15.604 17.539 12.866 19.5 8.302C17.539 3.738 14.056 1 10.248 1H10.252C6.444 1 2.961 3.738 1 8.302C2.961 12.866 6.444 15.604 10.252 15.604H10.248Z"
+        stroke="#C6C6C6"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                            </button>
+                        </div>
+                        <a href="/auth.html" class="auth-popup__signin-reset">
+                            Я не помню пароль
+                        </a>
+                        <div class="message"></div>
+                    </div>
+                    <button type="submit" class="btn btn_black">ВОЙТИ</button>
+                </form>
+                <form
+                    id="signup"
+                    class="auth-popup__form auth-popup__form_signup"
+                >
+                    <div class="message-wrapper auth-popup__item">
+                        <input
+                            placeholder="Ваше имя"
+                            type="text"
+                            name="signup-name"
+                            id="signup-name"
+                        />
+                        <div class="message"></div>
+                    </div>
+                    <div class="message-wrapper auth-popup__item">
+                        <input
+                            placeholder="+7 (XXX) XXX XX XX"
+                            type="tel"
+                            data-type="tel"
+                            name="signup-tel"
+                            id="signup-tel"
+                        />
+                        <div class="message"></div>
+                    </div>
+                    <div class="message-wrapper auth-popup__item">
+                        <input
+                            placeholder="Ваш e-mail"
+                            type="text"
+                            data-type="email"
+                            name="signup-email"
+                            id="signup-email"
+                        />
+                        <div class="message"></div>
+                    </div>
+                    <div class="message-wrapper auth-popup__item">
+                        <div class="auth-popup__item-wrapper">
+                            <div class="auth-popup__sex">
+                                <span>Пол</span>
+                                <label for="signup-sex-male">
+                                    <input
+                                        type="radio"
+                                        name="signup-sex"
+                                        id="signup-sex-male"
+                                        value="male"
+                                    />
+                                    <span>муж</span>
+                                </label>
+                                <label for="signup-sex-female">
+                                    <input
+                                        type="radio"
+                                        name="signup-sex"
+                                        id="signup-sex-female"
+                                        value="female"
+                                    />
+                                    <span>жен</span>
+                                </label>
+                            </div>
+                            <div class="auth-popup__date">
+                                <span>Дата рождения</span>
+                                <label for="signup-date">
+                                    <input
+                                        type="date"
+                                        name="signup-date"
+                                        id="signup-date"
+                                        data-type="birth"
+                                    />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="message"></div>
+                    </div>
+                    <div
+                        class="message-wrapper auth-popup__item auth-popup__item_pass"
+                    >
+                        <div class="pass-hint">
+                            <p>
+                                Пароль должен соответствовать следующим
+                                критериям:
+                            </p>
+                            <ul>
+                                <li>Минимум одна буква</li>
+                                <li>Минимум одна цифра</li>
+                                <li>Минимум 8 символов</li>
+                                <li>Минимум одна заглавная буква</li>
+                                <li>Только латинские симфолы</li>
+                            </ul>
+                        </div>
+                        <div class="auth-popup__item-wrapper">
+                            <input
+                                placeholder="Пароль"
+                                type="password"
+                                name="signup-pass"
+                                id="signup-pass"
+                                data-type="signup-pass"
+                                class="original-pass"
+                            />
+                            <button class="show-pass">
+                                <svg
+    width="21"
+    height="17"
+    viewBox="0 0 21 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M13.4114 8.3022C13.4114 10.0482 11.9954 11.4632 10.2494 11.4632C8.50338 11.4632 7.08838 10.0482 7.08838 8.3022C7.08838 6.5552 8.50338 5.1402 10.2494 5.1402C11.9954 5.1402 13.4114 6.5552 13.4114 8.3022Z"
+        stroke="#C6C6C6"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M10.248 15.604C14.056 15.604 17.539 12.866 19.5 8.302C17.539 3.738 14.056 1 10.248 1H10.252C6.444 1 2.961 3.738 1 8.302C2.961 12.866 6.444 15.604 10.252 15.604H10.248Z"
+        stroke="#C6C6C6"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                            </button>
+                        </div>
+                        <div class="message"></div>
+                    </div>
+                    <div
+                        class="message-wrapper auth-popup__item auth-popup__item_pass-repeat"
+                    >
+                        <div class="auth-popup__item-wrapper">
+                            <input
+                                placeholder="Повторите пароль"
+                                type="password"
+                                name="signup-pass-repeat"
+                                id="signup-pass-repeat"
+                                data-type="signup-pass-repeat"
+                            />
+                            <button class="show-pass">
+                                <svg
+    width="21"
+    height="17"
+    viewBox="0 0 21 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M13.4114 8.3022C13.4114 10.0482 11.9954 11.4632 10.2494 11.4632C8.50338 11.4632 7.08838 10.0482 7.08838 8.3022C7.08838 6.5552 8.50338 5.1402 10.2494 5.1402C11.9954 5.1402 13.4114 6.5552 13.4114 8.3022Z"
+        stroke="#C6C6C6"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M10.248 15.604C14.056 15.604 17.539 12.866 19.5 8.302C17.539 3.738 14.056 1 10.248 1H10.252C6.444 1 2.961 3.738 1 8.302C2.961 12.866 6.444 15.604 10.252 15.604H10.248Z"
+        stroke="#C6C6C6"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                            </button>
+                        </div>
+                        <div class="message"></div>
+                    </div>
+                    <button type="submit" class="btn btn_black">
+                        зАРЕГИСТРИРОВАТЬСЯ
+                    </button>
+                </form>
+            </div>
+            <img src="/images/bg/popup2.png" class="auth-popup__bg" alt="" />
+        </div>
+    </div>
+</aside>
+
 </main>
 
         <div class="overlay"></div>
@@ -1356,7 +1639,7 @@
         ></script>
         <script src="../vendor/js/swiper-bundle.min.js"></script>
         <script src="../vendor/js/fancybox.umd.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.pack.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.pack.js"></script> -->
         <script src="../vendor/js/aos.js"></script>
         <script src="../js/script.js"></script>
         <script src="../js/main.js" type="module"></script>

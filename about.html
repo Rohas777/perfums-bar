@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/vendor/css/swiper-bundle.min.css" />
+@@include('layouts/app.html', { "data": "@@include('layouts/about.html')",
+"title": "О нас", "stylesPath": "/css/about.css", "scriptPath": "../js/about.js"
+})
+     <link rel="stylesheet" href="/vendor/css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="/vendor/css/aos.css" />
         <link rel="stylesheet" href="/vendor/css/fancybox.css" />
         <link rel="stylesheet" href="/css/about.css" />
@@ -747,7 +745,7 @@
         ></script>
         <script src="../vendor/js/swiper-bundle.min.js"></script>
         <script src="../vendor/js/fancybox.umd.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.pack.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.pack.js"></script> -->
         <script src="../vendor/js/aos.js"></script>
         <script src="../js/script.js"></script>
         <script src="../js/about.js" type="module"></script>
