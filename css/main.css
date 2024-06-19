@@ -997,11 +997,11 @@ header .container {
   font-family: var(--helvetica);
   font-weight: bold;
   font-size: 15px;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  -ms-transition: all 0.3s ease-in-out 0s;
-  -o-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  -moz-transition: all 0.15s ease-in-out 0s;
+  -ms-transition: all 0.15s ease-in-out 0s;
+  -o-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
 }
 
 .header__cart:hover {
@@ -1182,6 +1182,11 @@ footer .section-separator {
 
 * {
   line-height: normal;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1855,17 +1860,17 @@ main {
   width: 100%;
   height: 100%;
   z-index: 1001;
-  transform: translate(150%, 0);
-  -moz-transform: translate(150%, 0);
-  -ms-transform: translate(150%, 0);
-  -webkit-transform: translate(150%, 0);
-  -o-transform: translate(150%, 0);
-  transform: translate(150%, 0);
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  transform: translate(120%, 0);
+  -moz-transform: translate(120%, 0);
+  -ms-transform: translate(120%, 0);
+  -webkit-transform: translate(120%, 0);
+  -o-transform: translate(120%, 0);
+  transform: translate(120%, 0);
+  -webkit-transition: all 0.4s cubic-bezier(0.16, 0.64, 0.44, 1.17) 0s;
+  -moz-transition: all 0.4s cubic-bezier(0.16, 0.64, 0.44, 1.17) 0s;
+  -ms-transition: all 0.4s cubic-bezier(0.16, 0.64, 0.44, 1.17) 0s;
+  -o-transition: all 0.4s cubic-bezier(0.16, 0.64, 0.44, 1.17) 0s;
+  transition: all 0.4s cubic-bezier(0.16, 0.64, 0.44, 1.17) 0s;
 }
 
 .auth-popup.active {
@@ -1896,6 +1901,7 @@ main {
 
 .auth-popup__bg {
   position: absolute;
+  min-height: 767px;
   bottom: 0;
   left: 0;
   z-index: 1;
@@ -2918,7 +2924,6 @@ main {
 }
 
 .utp2 {
-  margin-bottom: 110px;
   position: relative;
   color: #ffffff;
 }
@@ -3140,6 +3145,7 @@ main {
 }
 
 .certs {
+  padding-top: 110px;
   margin-bottom: 110px;
 }
 

@@ -109,7 +109,7 @@ $(document).ready(function () {
         $(".filter").removeClass("opened");
     });
 
-    //NOTE - Фльтры
+    //NOTE - Фильтры
 
     $(".filter__head-wrapper").click(function () {
         if (!$(this).find(".filter__show").length) return;
@@ -127,6 +127,20 @@ $(document).ready(function () {
         console.log(
             $(this).closest(".filter__chunk").find("input").prop("checked")
         );
+    });
+
+    $(function () {
+        $(".filter-range").slider({
+            range: true,
+            value: 37,
+            min: 2000,
+            max: 20000,
+            values: [4000, 20000],
+            slide: function (event, ui) {
+                $(".filter__range-min").text(ui.values[0]);
+                $(".filter__range-max").text(ui.values[1]);
+            },
+        });
     });
 
     //NOTE - Слайдер истории просмотров

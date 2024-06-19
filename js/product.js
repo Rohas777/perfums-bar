@@ -9,6 +9,20 @@ $(document).ready(function () {
         $(".product__image_original").toggleClass("active");
     });
 
+    //NOTE - Переключение литража флакона
+
+    $(".product__capacity-item").click(function () {
+        if ($(this).hasClass("active") || $(this).hasClass("not-avialable")) {
+            return;
+        }
+
+        $(this)
+            .closest(".product__capacity")
+            .find(".product__capacity-item")
+            .removeClass("active");
+        $(this).addClass("active");
+    });
+
     //NOTE - Инициализация счётчика
 
     function initProductCounter() {
