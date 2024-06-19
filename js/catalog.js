@@ -124,9 +124,14 @@ $(document).ready(function () {
     $(".filter__reset").click(function (e) {
         e.preventDefault();
         $(this).closest(".filter__chunk").find("input").prop("checked", false);
-        console.log(
-            $(this).closest(".filter__chunk").find("input").prop("checked")
-        );
+    });
+
+    $(
+        ".filter__range .filter__reset, .filter__btns button[type='reset']"
+    ).click(function () {
+        $(".filter-range").slider("values", [4000, 20000]);
+        $(".filter__range-min").text($(".filter-range").slider("values")[0]);
+        $(".filter__range-max").text($(".filter-range").slider("values")[1]);
     });
 
     $(function () {
