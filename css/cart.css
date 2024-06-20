@@ -691,11 +691,11 @@ input[type=tel]::placeholder {
 
 .product-capacity {
   padding: 5px 0;
-  width: 52px;
+  width: clamp(40px, 4.2vw, 52px);
   text-align: center;
   border-radius: 16px;
   font-weight: 300;
-  font-size: 13px;
+  font-size: clamp(10px, 1.2vw, 13px);
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -1617,6 +1617,12 @@ main {
   font-size: 24px;
 }
 
+.product-card-mini__header {
+  width: 100%;
+  aspect-ratio: 7/6;
+  position: relative;
+}
+
 .product-card-mini__img {
   position: absolute;
   width: 100%;
@@ -1685,9 +1691,13 @@ main {
   stroke-width: 3px;
 }
 
-.product-recommendations .swiper-nav-item:hover {
+.product-recommendations .swiper-nav-item:active {
   background-color: var(--red);
   border-color: var(--red);
+}
+
+.product-recommendations .swiper-nav-item:active path {
+  stroke: #fff;
 }
 
 .product-recommendations .swiper-button-next {
@@ -1945,7 +1955,7 @@ main {
   .header__nav {
     position: fixed;
     top: 0;
-    background-color: var(--red);
+    background-color: var(--black);
     margin-top: var(--header-height);
     padding-bottom: var(--header-height);
     display: none;
@@ -2038,6 +2048,15 @@ main {
     row-gap: 60px;
     flex-wrap: wrap;
   }
+
+  .product-card-mini__header {
+    min-height: 160px;
+    aspect-ratio: 1/1;
+  }
+
+  .product-recommendations .swiper-header {
+    padding-right: 0;
+  }
 }
 
 @media (hover: hover) and (max-width: 1260px) {
@@ -2099,8 +2118,60 @@ main {
 }
 
 @media only screen and (max-width: 992px) {
+  .breadcrumbs {
+    margin: 30px 0 45px;
+  }
+
+  .search__border {
+    height: 13px;
+    width: 13px;
+    top: 7px;
+    right: 8px;
+  }
+
+  .search__border:after {
+    width: 5px;
+    bottom: -30px;
+    right: -29px;
+  }
+
+  .search__input {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .search__open {
+    height: 30px;
+    width: 30px;
+  }
+
+  .search__close {
+    height: 13px;
+    width: 13px;
+  }
+
+  .fav-button {
+    width: 20px;
+    height: 20px;
+  }
+
+  .fav-button svg {
+    width: 9px;
+    height: 8px;
+  }
+
   footer {
     padding-bottom: 165px;
+  }
+
+  .product-recommendations {
+    margin-bottom: 80px;
+  }
+
+  .product-recommendations .swiper-header {
+    margin-bottom: 60px;
+    align-items: center;
+    gap: 30px;
   }
 }
 
@@ -2170,6 +2241,15 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
+  .breadcrumbs {
+    margin: 20px 0 30px;
+  }
+
+  .search__input {
+    width: 200px;
+    padding: 5px 40px 5px 20px;
+  }
+
   footer {
     padding-bottom: 100px;
   }
@@ -2184,6 +2264,24 @@ main {
 
   .footer__column {
     flex: 1;
+  }
+
+  .product-recommendations .swiper-header {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .product-recommendations .swiper-nav {
+    align-self: end;
+  }
+}
+
+@media only screen and (max-width: 476px) {
+  .search__input {
+    padding: 5px 30px 5px 10px;
+    width: 130px;
   }
 }
 
@@ -2215,28 +2313,12 @@ main {
     stroke: var(--white);
   }
 
-  .swiper-button-prev:hover {
-    -moz-transform: scale(0.85);
-    -ms-transform: scale(0.85);
-    -webkit-transform: scale(0.85);
-    -o-transform: scale(0.85);
-    transform: scale(0.85);
-  }
-
   .swiper-button-prev:hover svg {
     -moz-transform: translate(-5px, 0) rotate(180deg);
     -ms-transform: translate(-5px, 0) rotate(180deg);
     -webkit-transform: translate(-5px, 0) rotate(180deg);
     -o-transform: translate(-5px, 0) rotate(180deg);
     transform: translate(-5px, 0) rotate(180deg);
-  }
-
-  .swiper-button-next:hover {
-    -moz-transform: scale(0.85);
-    -ms-transform: scale(0.85);
-    -webkit-transform: scale(0.85);
-    -o-transform: scale(0.85);
-    transform: scale(0.85);
   }
 
   .swiper-button-next:hover svg {
@@ -2338,5 +2420,14 @@ main {
 
   .footer__socials a:hover {
     background-color: var(--red);
+  }
+
+  .product-recommendations .swiper-nav-item:hover {
+    background-color: var(--red);
+    border-color: var(--red);
+  }
+
+  .product-recommendations .swiper-nav-item:hover path {
+    stroke: #fff;
   }
 }

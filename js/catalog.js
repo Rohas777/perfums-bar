@@ -140,6 +140,7 @@ $(document).ready(function () {
             value: 37,
             min: 2000,
             max: 20000,
+            step: 100,
             values: [4000, 20000],
             slide: function (event, ui) {
                 $(".filter__range-min").text(ui.values[0]);
@@ -151,13 +152,27 @@ $(document).ready(function () {
     //NOTE - Слайдер истории просмотров
 
     const historySwiper = new Swiper(".history__slider", {
-        slidesPerView: 3,
         spaceBetween: 35,
         loop: true,
 
         navigation: {
             nextEl: ".history__slider .swiper-button-next",
             prevEl: ".history__slider .swiper-button-prev",
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            391: {
+                slidesPerView: 2,
+            },
+            601: {
+                slidesPerView: 4,
+            },
+            1261: {
+                slidesPerView: 3,
+            },
         },
     });
 });

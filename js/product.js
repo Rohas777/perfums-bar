@@ -92,7 +92,6 @@ $(document).ready(function () {
     //NOTE - Слайдер похожих товаров
 
     const similarSwiper = new Swiper(".similar__slider", {
-        slidesPerView: 3,
         spaceBetween: 35,
         loop: true,
 
@@ -100,18 +99,45 @@ $(document).ready(function () {
             nextEl: ".similar__slider .swiper-button-next",
             prevEl: ".similar__slider .swiper-button-prev",
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            391: {
+                slidesPerView: 2,
+            },
+            601: {
+                slidesPerView: 4,
+            },
+            1261: {
+                slidesPerView: 3,
+            },
+        },
     });
 
     //NOTE - Слайдер рекомендуемых товаров
 
     const recommendationsSwiper = new Swiper(".recommendations__slider", {
-        slidesPerView: 3,
         spaceBetween: 35,
         loop: true,
 
         navigation: {
             nextEl: ".recommendations__slider .swiper-button-next",
             prevEl: ".recommendations__slider .swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            391: {
+                slidesPerView: 2,
+            },
+            601: {
+                slidesPerView: 4,
+            },
+            1261: {
+                slidesPerView: 3,
+            },
         },
     });
 });

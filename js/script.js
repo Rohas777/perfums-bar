@@ -307,7 +307,7 @@ function turnOverlay(turn) {
 $(document).ready(function () {
     $(".header__burger").click(function () {
         $(this).toggleClass("active");
-        $(".header__nav").fadeToggle(800);
+        $(".header__nav").slideToggle(500);
         switchScroll();
     });
 });
