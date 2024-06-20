@@ -1497,9 +1497,15 @@ main {
 }
 
 .content p {
-  font-size: 20px;
+  font-size: clamp(12px, 1.5vw, 20px);
   font-weight: 300;
   margin-bottom: 30px;
+}
+
+.content img {
+  max-width: 50%;
+  min-width: 100px;
+  height: auto;
 }
 
 .content .alignleft {
@@ -1894,6 +1900,10 @@ main {
     display: -webkit-flex;
     display: flex;
   }
+
+  .content p {
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2001,6 +2011,10 @@ main {
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
     overflow-x: clip !important;
+  }
+
+  .content p {
+    margin-bottom: 10px;
   }
 }
 

@@ -1450,7 +1450,7 @@ main {
   text-align: right;
 }
 
-.product__wrapper .product__delivery-link:hover {
+.product__wrapper .product__delivery-link:active {
   color: var(--red);
   background-color: transparent;
 }
@@ -1602,7 +1602,7 @@ main {
   position: static;
 }
 
-.product__orig-wrapper .product__delivery-link:hover {
+.product__orig-wrapper .product__delivery-link:active {
   color: #fff;
   background-color: var(--red);
 }
@@ -1622,12 +1622,12 @@ main {
   transition: all 0.3s ease-out 0s;
 }
 
-.product__orig-button:hover {
+.product__orig-button:active {
   color: #fff;
   background-color: var(--red);
 }
 
-.product__orig-button:hover path {
+.product__orig-button:active path {
   stroke: #fff;
 }
 
@@ -1927,13 +1927,10 @@ main {
   transition: all 0.3s ease-out 0s;
 }
 
-.product .counter-control:not(.disabled):hover {
+.product .counter-control:not(.disabled):active {
   background-color: var(--red);
   border-color: var(--red);
   color: #fff;
-}
-
-.product .counter-control:not(.disabled):active {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -webkit-transform: scale(1.2);
@@ -2822,5 +2819,30 @@ main {
 
   .product-recommendations .swiper-nav-item:hover path {
     stroke: #fff;
+  }
+
+  .product__wrapper .product__delivery-link:hover {
+    color: var(--red);
+    background-color: transparent;
+  }
+
+  .product__orig-wrapper .product__delivery-link:hover {
+    color: #fff;
+    background-color: var(--red);
+  }
+
+  .product__orig-button:hover {
+    color: #fff;
+    background-color: var(--red);
+  }
+
+  .product__orig-button:hover path {
+    stroke: #fff;
+  }
+
+  .product .counter-control:not(.disabled):hover {
+    background-color: var(--red);
+    border-color: var(--red);
+    color: #fff;
   }
 }
