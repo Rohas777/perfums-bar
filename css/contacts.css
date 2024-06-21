@@ -1222,11 +1222,6 @@ footer .section-separator {
   line-height: normal;
 }
 
-html,
-body {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--futura);
   display: -webkit-box;
@@ -1350,24 +1345,16 @@ main {
   transition: all 0.3s ease-out 0s;
 }
 
-.stages__list li:hover {
+.stages__list li:active {
   color: #000;
 }
 
-.stages__list li:hover::before {
+.stages__list li:active::before {
   background-color: #000;
 }
 
 .stages__list li:last-of-type {
   margin-bottom: 0;
-}
-
-.stages__list:has(li:hover) li:not(:hover) {
-  color: #6f6f6f;
-}
-
-.stages__list:has(li:hover) li:not(:hover)::before {
-  background-color: #6f6f6f;
 }
 
 .stages__wrapper {
@@ -1790,7 +1777,7 @@ main {
   font-weight: 500;
 }
 
-.contacts__btn:has(.contacts__link:hover) {
+.contacts__btn:has(.contacts__link:active) {
   background-color: var(--red);
 }
 
@@ -1825,7 +1812,7 @@ main {
   position: relative;
 }
 
-.contacts__socials a:hover {
+.contacts__socials a:active {
   background-color: var(--red);
 }
 
@@ -1890,7 +1877,7 @@ main {
   }
 
   .header__nav li:active {
-    color: #fff;
+    color: var(--red);
     -moz-transform: scale(0.9);
     -ms-transform: scale(0.9);
     -webkit-transform: scale(0.9);
@@ -1998,7 +1985,7 @@ main {
     -webkit-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
-    color: #fff;
+    color: var(--red);
   }
 }
 
@@ -2422,6 +2409,22 @@ main {
     background-color: var(--red);
   }
 
+  .stages__list li:hover {
+    color: #000;
+  }
+
+  .stages__list li:hover::before {
+    background-color: #000;
+  }
+
+  .stages__list:has(li:hover) li:not(:hover) {
+    color: #6f6f6f;
+  }
+
+  .stages__list:has(li:hover) li:not(:hover)::before {
+    background-color: #6f6f6f;
+  }
+
   .utp__follow-wrapper button:hover svg {
     transform: translate(10px, 0);
     -moz-transform: translate(10px, 0);
@@ -2451,5 +2454,13 @@ main {
     -webkit-transform: translate(10px, 0);
     -o-transform: translate(10px, 0);
     transform: translate(10px, 0);
+  }
+
+  .contacts__btn:has(.contacts__link:hover) {
+    background-color: var(--red);
+  }
+
+  .contacts__socials a:hover {
+    background-color: var(--red);
   }
 }

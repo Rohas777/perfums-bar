@@ -403,24 +403,27 @@
             </div>
             <div class="utp__feedback">
                 <form id="feedback">
-                    <div class="utp__feedback-wrapper message-wrapper">
-                        <input
-                            type="text"
-                            name="feedback-name"
-                            id="feedback-name"
-                            placeholder="Ваше имя"
-                        />
-                        <input
-                            type="tel"
-                            data-type="tel"
-                            name="feedback-tel"
-                            id="feedback-tel"
-                            placeholder="+7 (XXX) XXX XX XX"
-                        />
+                    <div class="message-wrapper">
+                        <div class="utp__feedback-wrapper">
+                            <input
+                                type="text"
+                                name="feedback-name"
+                                id="feedback-name"
+                                placeholder="Ваше имя"
+                            />
+                            <input
+                                type="tel"
+                                name="feedback-tel"
+                                id="feedback-tel"
+                                data-type="tel"
+                                placeholder="+7 (XXX) XXX XX XX"
+                            />
+                        </div>
                         <p class="message"></p>
-                        <button type="submit" class="btn">
-                            <span>Оставить заявку</span>
-                            <svg
+                    </div>
+                    <button type="submit" class="btn">
+                        <span>Оставить заявку</span>
+                        <svg
     width="40"
     height="40"
     viewBox="0 0 40 40"
@@ -443,8 +446,7 @@
     />
 </svg>
 
-                        </button>
-                    </div>
+                    </button>
                 </form>
             </div>
         </div>
@@ -928,6 +930,105 @@
                     </p>
                 </div>
             </div>
+            <div class="audience__slider-wrapper">
+                <div class="audience__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="audience__item swiper-slide">
+                            <div class="audience__image">
+                                <img
+                                    src="/images/franchise/audience1.png"
+                                    alt=""
+                                />
+                                <h3>Новички в бизнесе</h3>
+                            </div>
+                            <p>
+                                Идеально подходит для амбициозных и
+                                целеустремленных новичков в мире бизнеса,
+                                желающих учиться на практике и получать прибыль
+                                от развития бизнеса, даже без предварительного
+                                опыта в маркетинге, финансах и управлении
+                                персоналом
+                            </p>
+                        </div>
+                        <div class="audience__item swiper-slide">
+                            <div class="audience__image">
+                                <img
+                                    src="/images/franchise/audience2.png"
+                                    alt=""
+                                />
+                                <h3>Начинающие бизнесмены</h3>
+                            </div>
+                            <p>
+                                Отличный выбор для предпринимателей, уже имеющих
+                                опыт в сфере маркетинга, финансов и управления
+                                персоналом, но желающих получить базовую
+                                консультационную поддержку для эффективного
+                                развития своего бизнеса
+                            </p>
+                        </div>
+                        <div class="audience__item swiper-slide">
+                            <div class="audience__image">
+                                <img
+                                    src="/images/franchise/audience3.png"
+                                    alt=""
+                                />
+                                <h3>Опытные предприниматели</h3>
+                            </div>
+                            <p>
+                                Идеальный выбор для бизнесменов, обладающих
+                                опытом в маркетинге, финансах и управлении
+                                персоналом, и стремящихся к максимизации дохода
+                                и прибыли путем открытия и развития сети
+                                магазинов
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="swiper-nav-item swiper-button-prev">
+                    <svg
+    width="13"
+    height="25"
+    viewBox="0 0 13 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+        transform="rotate(180)"
+    
+    
+>
+    <path
+        d="M0.900116 23.5703L12.0176 12.5006L0.900116 1.43098"
+        stroke="#4A4A4A"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                </div>
+                <div class="swiper-nav-item swiper-button-next">
+                    <svg
+    width="13"
+    height="25"
+    viewBox="0 0 13 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+    
+>
+    <path
+        d="M0.900116 23.5703L12.0176 12.5006L0.900116 1.43098"
+        stroke="#4A4A4A"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+
+                </div>
+            </div>
         </div>
     </section>
     <section class="about">
@@ -1013,6 +1114,7 @@
                         </a>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
                 <div class="swiper-nav">
                     <div class="swiper-nav-item swiper-button-prev">
                         <svg
