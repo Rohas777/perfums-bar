@@ -1368,6 +1368,10 @@ main {
   flex: 1;
 }
 
+.offer-advantage.swiper-slide .offer-advantage__text p {
+  flex-basis: auto;
+}
+
 .offer-advantage:hover img {
   border-color: transparent;
   -moz-transform: translate(-50%, -50%) scale(1.1);
@@ -1391,6 +1395,7 @@ main {
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
+  align-self: center;
 }
 
 .offer-advantage__image img {
@@ -2697,6 +2702,10 @@ main {
   padding: 0 20px;
   width: 100%;
   display: none;
+}
+
+.offer-advantages__slider .swiper-wrapper {
+  align-items: center;
 }
 
 .offer-advantages__slider .swiper-button-nav {

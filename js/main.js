@@ -431,7 +431,7 @@ $(document).ready(function () {
 
     const reviewsSwiper = new Swiper(".reviews__slider", {
 
-        loop: true,
+        slidesPerView: 3,
 
         navigation: {
 
@@ -456,6 +456,8 @@ $(document).ready(function () {
                 spaceBetween: 30,
 
                 slidesPerView: 1,
+
+                loop: true,
 
             },
 
