@@ -1592,7 +1592,7 @@ main {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  font-size: 24px;
+  font-size: clamp(15px, 2.3vw, 24px);
 }
 
 .product-card-mini__header {
