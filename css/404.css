@@ -472,6 +472,10 @@ input[type=tel]::placeholder {
   text-transform: capitalize;
 }
 
+.breadcrumbs a:active {
+  color: var(--red);
+}
+
 .search {
   position: absolute;
   right: 0;
@@ -1691,6 +1695,7 @@ main {
     bottom: -3px;
     right: -122px;
     width: 76vw;
+    min-width: 382px;
   }
 
   .not-found__bg_2 {
