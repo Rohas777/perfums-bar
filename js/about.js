@@ -17,6 +17,8 @@ $(document).ready(function () {
 
         slidesPerView: 3,
 
+        loop: true,
+
         navigation: {
 
             nextEl: ".reviews__nav .swiper-button-next",
@@ -40,8 +42,6 @@ $(document).ready(function () {
                 spaceBetween: 30,
 
                 slidesPerView: 1,
-
-                loop: true,
 
             },
 
