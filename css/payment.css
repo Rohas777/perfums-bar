@@ -1288,7 +1288,7 @@ main {
 }
 
 .payment__count {
-  font-size: 24px;
+  font-size: clamp(15px, 2.3vw, 24px);
   color: #4a4a4a;
 }
 
@@ -1302,9 +1302,10 @@ main {
 }
 
 .payment__wrapper h3 {
-  font-size: 24px;
+  font-size: clamp(16px, 2vw, 24px);
   font-family: var(--helvetica);
   font-weight: 300;
+  margin-bottom: 42px;
   text-transform: uppercase;
 }
 
@@ -1313,13 +1314,9 @@ main {
   flex: 1;
 }
 
-.payment__data h3,
-.payment__order h3 {
-  margin-bottom: 42px;
-}
-
 .payment__data {
   max-width: 600px;
+  width: 100%;
 }
 
 .payment__data .payment__block {
@@ -1507,7 +1504,7 @@ main {
 }
 
 .payment__desc {
-  font-size: 20px;
+  font-size: clamp(14px, 1.7vw, 20px);
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1526,6 +1523,14 @@ main {
   border-radius: 50%;
 }
 
+.payment__map {
+  width: 100%;
+}
+
+.payment__map img {
+  width: 100%;
+}
+
 .payment__order {
   display: -webkit-box;
   display: -moz-box;
@@ -1533,6 +1538,9 @@ main {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
+  flex-basis: 460px;
+  max-width: 650px;
+  width: 100%;
 }
 
 .payment__order .payment__block {
@@ -1561,7 +1569,7 @@ main {
 }
 
 .payment__item strong {
-  font-size: 20px;
+  font-size: clamp(15px, 1.7vw, 20px);
   font-weight: 500;
   display: block;
 }
@@ -1586,19 +1594,19 @@ main {
 }
 
 .payment__product p {
-  font-size: 20px;
+  font-size: clamp(13px, 1.6vw, 20px);
   margin-bottom: 5px;
 }
 
 .payment__product span {
-  font-size: 11px;
+  font-size: clamp(10px, 1.4vw, 11px);
   font-weight: 300;
   margin-left: 1px;
   display: block;
 }
 
 .payment__cost {
-  font-size: 20px;
+  font-size: clamp(13px, 1.6vw, 20px);
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1662,7 +1670,7 @@ main {
   gap: 25px;
   cursor: pointer;
   color: #000;
-  font-size: 20px;
+  font-size: clamp(15px, 1.7vw, 20px);
 }
 
 .payment__radios input {
@@ -1680,6 +1688,7 @@ main {
 .payment__radios .checkmark {
   height: 36px;
   width: 36px;
+  flex-shrink: 0;
   background-color: #eee;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -2088,6 +2097,119 @@ main {
     width: 14px;
     height: 17px;
   }
+
+  .payment__head {
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .payment__head .separator {
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .payment__wrapper {
+    gap: clamp(20px, 6vw, 64px);
+  }
+
+  .payment__wrapper h3 {
+    margin-bottom: 20px;
+  }
+
+  .payment__data .payment__block {
+    padding: 45px 25px;
+  }
+
+  .payment__data label {
+    gap: 32px;
+  }
+
+  .payment__data label:last-of-type {
+    margin-bottom: 30px;
+  }
+
+  .payment__data input {
+    height: 30px;
+    padding: 7px 15px;
+  }
+
+  .payment__marker {
+    height: 30px;
+    width: 30px;
+  }
+
+  .payment__marker svg {
+    height: 18px;
+    width: 18px;
+  }
+
+  .payment__desc {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .payment__desc::before {
+    width: 22px;
+    height: 22px;
+  }
+
+  .payment__order .payment__block {
+    padding: 20px 32px 30px;
+    margin-bottom: 20px;
+  }
+
+  .payment__item {
+    padding-bottom: 26px;
+  }
+
+  .payment__item_product strong {
+    margin-bottom: 30px;
+  }
+
+  .payment__list-item {
+    margin-bottom: 30px;
+  }
+
+  .payment__list-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .payment__total span {
+    font-size: clamp(24px, 2.9vw, 40px);
+  }
+
+  .payment__total strong {
+    font-size: clamp(24px, 2.9vw, 48px);
+  }
+
+  .payment__select {
+    margin-bottom: 45px;
+  }
+
+  .payment__select h3 {
+    margin-bottom: 36px;
+  }
+
+  .payment__radios label {
+    white-space: nowrap;
+    gap: 15px;
+    width: auto;
+    max-width: none;
+  }
+
+  .payment__radios .checkmark {
+    width: 22px;
+    height: 22px;
+  }
+
+  .payment__btns {
+    justify-content: end;
+  }
+
+  .payment__btns a {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -2135,6 +2257,21 @@ main {
 
   footer {
     padding-bottom: 165px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .payment__wrapper {
+    flex-direction: column;
+  }
+
+  .payment__data,
+  .payment__order {
+    max-width: none;
+  }
+
+  .payment__btns {
+    justify-content: center;
   }
 }
 
@@ -2200,6 +2337,10 @@ main {
 
   .container {
     padding: 0 15px;
+  }
+
+  .payment {
+    padding-bottom: 80px;
   }
 }
 
